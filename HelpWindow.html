@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 4 - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>JitHub - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>AddressBook Level 4 - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>JitHub - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>CS2113-AY1819S1-W12-1</code>      Since: <code>Aug 2018</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -24,9 +24,14 @@
 <li><a href="#undoing-previous-command-code-undo-code-code-z-code">3.9. Undoing previous command : <code>undo</code> / <code>z</code></a></li>
 <li><a href="#redoing-the-previously-undone-command-code-redo-code-code-y-code">3.10. Redoing the previously undone command : <code>redo</code> / <code>y</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code-code-c-code">3.11. Clearing all entries : <code>clear</code> / <code>c</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code-code-x-code">3.12. Exiting the program : <code>exit</code> / <code>x</code></a></li>
-<li><a href="#saving-the-data">3.13. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#exporting-all-contacts-code-exportall-code-coming-in-v1-4">3.12. Exporting all contacts : <code>exportall</code> [coming in v1.4]</a></li>
+<li><a href="#exporting-contacts-code-export-code-coming-in-v1-4">3.13. Exporting contacts : <code>export</code> [coming in v1.4]</a></li>
+<li><a href="#enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.14. Enter or delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></li>
+<li><a href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.15. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></li>
+<li><a href="#list-unread-new-email-auto-reply-of-email-code-mail-code-coming-in-v1-4">3.16. List Unread / New Email / Auto-reply of email: <code>mail</code> [coming in v1.4]</a></li>
+<li><a href="#exiting-the-program-code-exit-code-code-x-code">3.17. Exiting the program : <code>exit</code> / <code>x</code></a></li>
+<li><a href="#saving-the-data">3.18. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.19. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -38,7 +43,10 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 4 (AB4) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB4 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>JitHub is for students who <strong>prefer to use a desktop app for managing contacts, email, and calendar</strong>. More importantly,
+JitHub is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits
+of a Graphical User Interface (GUI). If you can type fast, JitHub can get your daily tasks such as checking schedule done faster than traditional GUI apps.
+Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -54,7 +62,7 @@
 <p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/CS2113-AY1819S1-W12-1/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your JitHub.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -66,7 +74,7 @@
 </li>
 <li>
 <p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.<br>
-e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
+e.g. typing <strong><code>help</code></strong> or <strong><code>h</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
 </li>
 <li>
 <p>Some example commands you can try:</p>
@@ -446,21 +454,159 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code-code-x-code"><a class="link" href="#exiting-the-program-code-exit-code-code-x-code">3.12. Exiting the program : <code>exit</code> / <code>x</code></a></h3>
+<h3 id="exporting-all-contacts-code-exportall-code-coming-in-v1-4"><a class="link" href="#exporting-all-contacts-code-exportall-code-coming-in-v1-4">3.12. Exporting all contacts : <code>exportall</code> [coming in v1.4]</a></h3>
+<div class="paragraph">
+<p>Export all persons in the address book to mobile phone.<br>
+Format: <code>exportall FILETYPE</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>exportall csv</code></p>
+</li>
+<li>
+<p><code>exportall vcf</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exporting-contacts-code-export-code-coming-in-v1-4"><a class="link" href="#exporting-contacts-code-export-code-coming-in-v1-4">3.13. Exporting contacts : <code>export</code> [coming in v1.4]</a></h3>
+<div class="paragraph">
+<p>Export the specified persons from the address book.<br>
+Format: <code>export INDEX N FILETYPE</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Export <code>N</code> persons starting from the specified <code>INDEX</code>.
+The index refers to the index number shown in the most recent listing.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>export 2 1 csv</code><br>
+Exports the 2nd person in the address book as a csv file.</p>
+</li>
+<li>
+<p><code>find Betsy</code><br>
+<code>export 1 5 vcf</code><br>
+Exports the five persons starting from the 1st person in the results of the <code>find</code> command as a vcf file.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4"><a class="link" href="#enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.14. Enter or delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></h3>
+<div class="paragraph">
+<p>Format:</p>
+</div>
+<div class="paragraph">
+<p><code>addschedule d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code>
+<code>delschedule d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>addschedule d/08112018 st/1000 et/1200 en/GER1000</code></p>
+</li>
+<li>
+<p><code>addschedule d/01012019 st/1000 et/1800 en/FireworkParty</code></p>
+</li>
+<li>
+<p><code>delschedule d/01012019 st/1000 et/1800 en/FireworkParty</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-common-schedule-code-commonschedule-code-coming-in-v1-4"><a class="link" href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.15. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></h3>
+<div class="paragraph">
+<p>Shows a list of common meeting time for a group of contacts and the user in that given that given period of time.<br>
+Format: <code>commonschedule p/PERSON&#8230;&#8203;[PERSON] sd/START-DATE-DDMMYYYY ed/END-DATE-DDMMYYYY t/HOURS</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>commonschedule p/John Smith p/Jane Doe sd/08092018 ed/01102018 t/1.5</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-unread-new-email-auto-reply-of-email-code-mail-code-coming-in-v1-4"><a class="link" href="#list-unread-new-email-auto-reply-of-email-code-mail-code-coming-in-v1-4">3.16. List Unread / New Email / Auto-reply of email: <code>mail</code> [coming in v1.4]</a></h3>
+<div class="paragraph">
+<p>Shows a list of unread or new emails of the user. Upen entering the index of the unread emails, the terminal will display the email’s title, body.
+The user can choose whether he wants to send an auto-reply to indicate that he has read it.<br>
+Format: <code>mail [i/INDEX]</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Keying the index is optional, without keying it, it will list all the mail items in the user’s current mailbox.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mail</code></p>
+</li>
+<li>
+<p><code>Expected output: 0/Latest Pomelo Fashion 1/Quora - will PHP die in 2018 2/How to communicate effectively</code></p>
+</li>
+<li>
+<p><code>mail i/INDEX</code></p>
+</li>
+<li>
+<p><code>mail i/1</code></p>
+</li>
+<li>
+<p><code>Expected output: t/Quora - will PHP die in 2018 ct/PHP is terrible blablablablabla s/quora@quora.com E/would you like to send an auto-reply to the sender? (Y/n)</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code-code-x-code"><a class="link" href="#exiting-the-program-code-exit-code-code-x-code">3.17. Exiting the program : <code>exit</code> / <code>x</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.18. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
-There is no need to save manually.</p>
+There is no need to save manually.<br>
+The storage file 'addressbook.xml' is located in the project root folder.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.19. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -472,7 +618,13 @@ There is no need to save manually.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the
+data of your previous JitHub folder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Q</strong>: How do I export my contacts to my phone?<br>
+<strong>A</strong>: Use the exportall command to generate a csv/vcf file and transfer that file to your phone. Use your phone contacts
+app to import that file.</p>
 </div>
 </div>
 </div>
@@ -519,7 +671,21 @@ e.g.<code>select 2</code></p>
 <li>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
+<li>
+<p><strong>ExportAll</strong> : <code>exportall FILETYPE</code> (to be added)</p>
+</li>
+<li>
+<p><strong>Mail</strong> : <code>mail [i/INDEX]</code> (to be added)</p>
+</li>
+<li>
+<p><strong>List Schedule</strong> : <code>commonschedule p/PERSON…[PERSON] sd/START-DATE-DDMMYYYY</code> * <strong>Mail</strong> : <code>mail [i/INDEX]</code><br>
+(to be added)</p>
+</li>
+<li>
+<p><strong>Add Schedule</strong> : <code>addschedule d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code> * <strong>Mail</strong> : <code>mail [i/INDEX]</code><br>
+(to be added)</p>
+</li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-01 20:56:39 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-01 20:58:05 UTC</div></div></div></body></html>
