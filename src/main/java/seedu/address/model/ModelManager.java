@@ -148,6 +148,7 @@ public class ModelManager extends ComponentManager implements Model {
                 && filteredPersons.equals(other.filteredPersons);
     }
 
+    //@@linnnruoo
     //=========== Remove a particular tag from all persons ====================================================
     @Override
     public void deleteTag(Tag tag) {
