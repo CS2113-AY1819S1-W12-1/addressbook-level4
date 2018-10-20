@@ -108,7 +108,7 @@ public class AddressBookParser {
             return new ExportAllCommandParser().parse(arguments);
 
         default:
-            String suggestion = new CommandSuggestion().returnSuggestion();
+            String suggestion = new CommandSuggestion().getSuggestion(commandWord);
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND + System.lineSeparator() + suggestion);
         }
     }
