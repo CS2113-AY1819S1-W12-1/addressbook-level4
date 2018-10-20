@@ -21,7 +21,6 @@ import seedu.address.commons.events.model.AddressBookChangedEvent;
  */
 
 public class CalendarPanel extends UiPart<Region> {
-    
     private static final String FXML = "CalendarPanel.fxml";
 
     private final Logger logger = LogsCenter.getLogger(this.getClass());
