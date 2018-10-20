@@ -3,14 +3,15 @@ package seedu.address.ui;
 
 // import java.time.format.DateTimeFormatter;
 import java.util.logging.Logger;
-import com.google.common.eventbus.Subscribe;
 
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarSource;
 // import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 
+//import com.google.common.eventbus.Subscribe;
 // import javafx.collections.ObservableList;
+
 import javafx.fxml.FXML;
 import javafx.scene.layout.Region;
 import seedu.address.commons.core.LogsCenter;
