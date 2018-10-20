@@ -67,7 +67,10 @@ dependencies {
     implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0'
     implementation group: 'javax.activation', name: 'activation', version: '1.1.1'
 
+    // added by jit wei
     compile group: 'com.opencsv', name: 'opencsv', version: '4.1'
+    // added by lin ruo
+    compile group: 'com.calendarfx', name: 'view', version: '10.5.0'
 
     testImplementation group: 'junit', name: 'junit', version: '4.12'
     testImplementation group: 'org.testfx', name: 'testfx-core', version: testFxVersion, {
