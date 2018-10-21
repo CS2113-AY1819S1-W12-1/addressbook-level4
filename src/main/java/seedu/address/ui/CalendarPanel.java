@@ -1,9 +1,10 @@
 //@author: linnnruoo
 package seedu.address.ui;
 
+import java.util.logging.Logger;
+
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarSource;
-// import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 
 import javafx.fxml.FXML;
@@ -27,12 +28,16 @@ public class CalendarPanel extends UiPart<Region> {
 
         calendarView.setShowAddCalendarButton(false);
         calendarView.setShowPrintButton(false);
-        calendarView.showWeekPage();
+        calendarView.showMonthPage();
 
         // Set css
         String fullpath = getClass().getResource("/view/calendar.css").toExternalForm();
         calendarView.getStylesheets().removeAll();
         calendarView.getStylesheets().add(fullpath);
+
+        calendar = new Calendar("Your Weekly Schedule");
+        calendar.setReadOnly(true)
+        ;
 
         CalendarSource myCalendarSource = new CalendarSource("My Personal Weekly Schedule");
         myCalendarSource.getCalendars().addAll(calendar);
