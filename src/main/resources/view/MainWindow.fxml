@@ -21,6 +21,7 @@
       <stylesheets>
         <URL value="@DarkTheme.css" />
         <URL value="@Extensions.css" />
+        <URL value="@CalendarTheme.css" />
       </stylesheets>
 
       <VBox>
@@ -59,6 +60,13 @@
               <Insets top="10" right="10" bottom="10" left="10" />
             </padding>
           </StackPane>
+
+          <StackPane fx:id="calendarPlaceholder" prefWidth="340" >
+            <padding>
+              <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+          </StackPane>
+
         </SplitPane>
 
         <StackPane fx:id="statusbarPlaceholder" VBox.vgrow="NEVER" />

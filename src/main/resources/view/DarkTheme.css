@@ -78,20 +78,20 @@
 }
 
 .split-pane:horizontal .split-pane-divider {
-    -fx-background-color: #203a43
+    -fx-background-color: #203a43;
     -fx-border-color: transparent transparent transparent #0f2027;
 }
 
 .split-pane {
     -fx-border-radius: 1;
     -fx-border-width: 1;
-    -fx-background-color: #203a43
+    -fx-background-color: #203a43;
 }
 
 .list-view {
     -fx-background-insets: 0;
     -fx-padding: 0;
-    -fx-background-color: #203a43
+    -fx-background-color: #203a43;
 }
 
 .list-cell {
