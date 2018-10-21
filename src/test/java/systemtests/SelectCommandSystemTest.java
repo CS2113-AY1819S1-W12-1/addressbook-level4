@@ -92,7 +92,7 @@ public class SelectCommandSystemTest extends AddressBookSystemTest {
 
         /* Case: mixed case command word -> rejected */
         assertCommandFailure("SeLeCt 1", MESSAGE_UNKNOWN_COMMAND
-                + System.lineSeparator() + CommandSuggestion.NO_SUGGESTION);
+                + "\n" + CommandSuggestion.NO_SUGGESTION);
 
         /* Case: select from empty address book -> rejected */
         deleteAllPersons();
