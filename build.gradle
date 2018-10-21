@@ -30,8 +30,8 @@ if (JavaVersion.current() == JavaVersion.VERSION_1_10
 // Specifies the entry point of the application
 mainClassName = 'seedu.address.MainApp'
 
-sourceCompatibility = JavaVersion.VERSION_1_9
-targetCompatibility = JavaVersion.VERSION_1_9
+sourceCompatibility = JavaVersion.VERSION_1_10
+targetCompatibility = JavaVersion.VERSION_1_10
 
 repositories {
     mavenCentral()
@@ -69,6 +69,7 @@ dependencies {
 
     compile group: 'com.opencsv', name: 'opencsv', version: '4.1'
 
+    //compile group: 'com.calendarfx', name: 'view', version: '11.5.0'
     compile group: 'com.calendarfx', name: 'view', version: '10.5.0'
 
     testImplementation group: 'junit', name: 'junit', version: '4.12'
