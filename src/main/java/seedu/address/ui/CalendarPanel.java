@@ -26,6 +26,7 @@ public class CalendarPanel extends UiPart<Region> {
 
         calendarView.setShowAddCalendarButton(false);
         calendarView.setShowPrintButton(false);
+        //calendarView.showMonthPage();
         calendarView.showWeekPage();
         calendarView.setShowDeveloperConsole(true);
         calendarView.setShowSearchResultsTray(false);
