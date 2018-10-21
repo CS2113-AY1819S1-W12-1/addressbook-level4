@@ -1,9 +1,12 @@
 package seedu.address.ui;
+
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarSource;
 import com.calendarfx.view.CalendarView;
+
 import javafx.fxml.FXML;
 import javafx.scene.layout.Region;
+
 /**
  * @@ author: linnnruoo
  * Calendar view of the App
