@@ -22,7 +22,7 @@ Responsibilities: Deliverables and deadlines +
 === Bao Linruo
 image::linnnruoo.png[width="150", align="left"]
 {empty}[https://github.com/linnnruoo[github]]
-[<<baolinruo#, portfolio>>]
+[<<linruo#, portfolio>>]
 
 Role: Developer +
 Responsibilities: Integration + Testing +
