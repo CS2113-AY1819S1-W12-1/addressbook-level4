@@ -110,11 +110,11 @@
 }
 
 .list-cell:filled:selected {
-    -fx-background-color: #cae9ff;
+    -fx-background-color: #e3f2fd;
 }
 
 .list-cell:filled:selected #cardPane {
-    -fx-border-color: #274c77;
+    -fx-border-color: #a09abc;
     -fx-border-width: 1;
 }
 
@@ -189,7 +189,7 @@
 }
 
 .menu-bar {
-    -fx-background-color: #6096ba;
+    -fx-background-color: #b6a6ca;
 }
 
 .menu-bar .label {
@@ -283,7 +283,7 @@
 }
 
 .scroll-bar .thumb {
-    -fx-background-color: #6096ba;
+    -fx-background-color: #b6a6ca;
     -fx-background-radius: 10;
     -fx-background-insets: 4;
 }
@@ -316,9 +316,9 @@
 }
 
 #commandTextField {
-    -fx-background-color: #d9d9d9;
+    -fx-background-color: #fafafa;
     -fx-background-insets: 0;
-    -fx-border-color: #6096ba #6096ba #ffffff #6096ba;
+    -fx-border-color: #b6a6ca #b6a6ca #ffffff #b6a6ca;
     -fx-border-insets: 0;
     -fx-border-width: 1;
     -fx-font-family: "Lucida Console";
@@ -332,7 +332,7 @@
 }
 
 #resultDisplay .content {
-    -fx-background-color: #d9d9d9;
+    -fx-background-color: #fafafa;
     -fx-background-radius: 0;
 }
 
@@ -343,7 +343,7 @@
 
 #tags .label {
     -fx-text-fill: #ffffff;
-    -fx-background-color: #6096ba;
+    -fx-background-color: #b6a6ca;
     -fx-padding: 2 4 2 4;
     -fx-border-radius: 2;
     -fx-background-radius: 2;
