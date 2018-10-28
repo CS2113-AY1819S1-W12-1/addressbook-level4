@@ -15,6 +15,7 @@ import com.opencsv.CSVWriter;
 
 import javafx.collections.ObservableList;
 import seedu.address.commons.core.LogsCenter;
+import seedu.address.commons.util.FileUtil;
 import seedu.address.model.ModelManager;
 import seedu.address.model.person.Person;
 
@@ -38,7 +39,15 @@ public class CsvWriter {
         requireAllNonNull(persons);
 
         // TODO: Refactor this to a exportFileWriter interface
-        logger.fine("Initializing with output file: " + outputFilepath.toString());
+        if (!FileUtil.isFileExists(outputFilepath)) {
+            try {
+                FileUtil.createFile(outputFilepath);
+            } catch (IOException e) {
+                logger.severe("Error creating output file: " + outputFilepath.toString());
+            }
+        } else {
+            logger.fine("Initializing with output file: " + outputFilepath.toString());
+        }
 
         this.persons = persons;
     }
@@ -46,7 +55,7 @@ public class CsvWriter {
     /**
      * Writes to the .csv file as defined in {@code outputFilepath}.
      */
-    public void write() {
+    public void write() throws IOException {
         try {
 
             File file = new File(String.valueOf(outputFilepath));
@@ -65,15 +74,15 @@ public class CsvWriter {
             writer.close();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new IOException();
         }
     }
 
     // TODO: Implement a writeToCsv() with a specific filepath.
 
     /**
-     *
-     * @param person {@code Person} A single person from the addressbook.
+     * Returns a string array that contains the details of a {@code person}.
+     * @param person {@code Person} to be saved to the string array.
      * @return A string array containing the name, phone, address, and email of
      *          the {@code person}.
      */

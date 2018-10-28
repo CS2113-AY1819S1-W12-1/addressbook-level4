@@ -3,6 +3,7 @@ package seedu.address.model;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
+import java.io.IOException;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 
@@ -177,7 +178,7 @@ public class ModelManager extends ComponentManager implements Model {
 
     //=========== Import/ Export ==============================================================================
     @Override
-    public void exportAddressBook() {
+    public void exportAddressBook() throws IOException {
         CsvWriter csvWriter = new CsvWriter(getFilteredPersonList());
         csvWriter.write();
     }

@@ -1,5 +1,6 @@
 package seedu.address.model;
 
+import java.io.IOException;
 import java.util.function.Predicate;
 
 import javafx.collections.ObservableList;
@@ -88,7 +89,7 @@ public interface Model {
     /**
      * Exports the current address book state to a .csv file.
      */
-    void exportAddressBook();
+    void exportAddressBook() throws IOException;
 
     /** Returns an unmodifiable view of the filtered todo task list */
     ObservableList<Todo> getFilteredTodoList();

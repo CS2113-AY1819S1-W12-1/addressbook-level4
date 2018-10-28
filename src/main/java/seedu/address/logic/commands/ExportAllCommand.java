@@ -2,7 +2,10 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
+import java.io.IOException;
+
 import seedu.address.logic.CommandHistory;
+import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Filetype;
 import seedu.address.model.Model;
 
@@ -15,8 +18,8 @@ public class ExportAllCommand extends Command {
     public static final String COMMAND_WORD = "exportall";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Exports all the persons in the address book"
-            + "Parameters: FILETYPE (must be either \"csv\" or \"vcf\") "
-            + "Example: " + COMMAND_WORD + " csv ";
+            + "\nParameters: FILETYPE (must be either \"csv\" or \"vcf\") "
+            + "\nExample: " + COMMAND_WORD + " csv ";
 
     public static final String MESSAGE_ARGUMENTS = "Filetype: %1$s";
     public static final String MESSAGE_SUCCESS = "Exported all contacts.";
@@ -24,9 +27,6 @@ public class ExportAllCommand extends Command {
 
     private Filetype filetype;
 
-    /**
-     * @param filetype of the export file
-     */
     public ExportAllCommand(Filetype filetype) {
         requireNonNull(filetype);
 
@@ -34,9 +34,15 @@ public class ExportAllCommand extends Command {
     }
 
     @Override
-    public CommandResult execute(Model model, CommandHistory history) {
+    public CommandResult execute(Model model, CommandHistory history) throws CommandException {
         requireNonNull(model);
-        model.exportAddressBook();
+
+        try {
+            model.exportAddressBook();
+        } catch (IOException e) {
+            throw new CommandException(MESSAGE_FAILURE);
+        }
+
         return new CommandResult(MESSAGE_SUCCESS);
     }
 
