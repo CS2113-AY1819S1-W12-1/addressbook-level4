@@ -22,7 +22,7 @@ public class BrowserPanel extends UiPart<Region> {
 
     public static final String DEFAULT_PAGE = "default.html";
     public static final String SEARCH_PAGE_URL =
-            "http://lmgtfy.com/?t=i&q=";
+            "http://www.google.com/?t=i&q=";
 
     private static final String FXML = "BrowserPanel.fxml";
 

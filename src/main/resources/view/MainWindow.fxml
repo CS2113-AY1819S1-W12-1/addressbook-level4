@@ -54,18 +54,18 @@
             <StackPane fx:id="personListPanelPlaceholder" VBox.vgrow="ALWAYS"/>
           </VBox>
 
-          <StackPane fx:id="browserPlaceholder" prefWidth="340" >
-            <padding>
-              <Insets top="10" right="10" bottom="10" left="10" />
-            </padding>
-          </StackPane>
-
-          <VBox fx:id="todoList" minWidth="340" prefWidth="340" SplitPane.resizableWithParent="false">
+          <VBox fx:id="todoList" minWidth="280" prefWidth="340" SplitPane.resizableWithParent="false">
             <padding>
               <Insets top="10" right="10" bottom="10" left="10" />
             </padding>
             <StackPane fx:id="todoListPanelPlaceholder" VBox.vgrow="ALWAYS"/>
           </VBox>
+
+          <StackPane fx:id="browserPlaceholder" prefWidth="280" >
+            <padding>
+              <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+          </StackPane>
         </SplitPane>
 
         <StackPane fx:id="statusbarPlaceholder" VBox.vgrow="NEVER" />
