@@ -59,15 +59,15 @@
               <Insets top="10" right="10" bottom="10" left="10" />
             </padding>
           </StackPane>
+
+          <VBox fx:id="todoList" minWidth="280" prefWidth="340" SplitPane.resizableWithParent="false">
+            <padding>
+              <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            <StackPane fx:id="todoListPanelPlaceholder" VBox.vgrow="ALWAYS"/>
+          </VBox>
+
         </SplitPane>
-
-        <VBox fx:id="todoList" minWidth="280" prefWidth="340" SplitPane.resizableWithParent="false">
-          <padding>
-            <Insets top="10" right="10" bottom="10" left="10" />
-          </padding>
-          <StackPane fx:id="todoListPanelPlaceholder" VBox.vgrow="ALWAYS"/>
-        </VBox>
-
         <StackPane fx:id="statusbarPlaceholder" VBox.vgrow="NEVER" />
       </VBox>
     </Scene>
