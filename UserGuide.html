@@ -28,7 +28,7 @@
 <li><a href="#exporting-contacts-code-export-code-coming-in-v1-4">3.13. Exporting contacts : <code>export</code> [coming in v1.4]</a></li>
 <li><a href="#enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.14. Enter or delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></li>
 <li><a href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.15. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></li>
-<li><a href="#list-unread-new-email-auto-reply-of-email-code-mail-code-coming-in-v1-4">3.16. List Unread / New Email / Auto-reply of email: <code>mail</code> [coming in v1.4]</a></li>
+<li><a href="#add-to-do-task-code-todo-code">3.16. Add To-do task: <code>todo</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code-code-x-code">3.17. Exiting the program : <code>exit</code> / <code>x</code></a></li>
 <li><a href="#saving-the-data">3.18. Saving the data</a></li>
 <li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.19. Encrypting data files <code>[coming in v2.0]</code></a></li>
@@ -574,11 +574,10 @@ Format: <code>commonschedule p/PERSON&#8230;&#8203;[PERSON] sd/START-DATE-DDMMYY
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-unread-new-email-auto-reply-of-email-code-mail-code-coming-in-v1-4"><a class="link" href="#list-unread-new-email-auto-reply-of-email-code-mail-code-coming-in-v1-4">3.16. List Unread / New Email / Auto-reply of email: <code>mail</code> [coming in v1.4]</a></h3>
+<h3 id="add-to-do-task-code-todo-code"><a class="link" href="#add-to-do-task-code-todo-code">3.16. Add To-do task: <code>todo</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of unread or new emails of the user. Upen entering the index of the unread emails, the terminal will display the email’s title, body.
-The user can choose whether he wants to send an auto-reply to indicate that he has read it.<br>
-Format: <code>mail [i/INDEX]</code></p>
+<p>Adds a to-do task, the to-do list panel will display the task&#8217;s title and its content.<br>
+Format: <code>todo tt/TITLE c/CONTENT</code></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -587,7 +586,7 @@ Format: <code>mail [i/INDEX]</code></p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Keying the index is optional, without keying it, it will list all the mail items in the user’s current mailbox.
+The user is unable to edit the content of the to-do task
 </td>
 </tr>
 </table>
@@ -598,19 +597,10 @@ Keying the index is optional, without keying it, it will list all the mail items
 <div class="ulist">
 <ul>
 <li>
-<p><code>mail</code></p>
+<p><code>todo tt/Write tests c/Need to write test for this command</code></p>
 </li>
 <li>
-<p><code>Expected output: 0/Latest Pomelo Fashion 1/Quora - will PHP die in 2018 2/How to communicate effectively</code></p>
-</li>
-<li>
-<p><code>mail i/INDEX</code></p>
-</li>
-<li>
-<p><code>mail i/1</code></p>
-</li>
-<li>
-<p><code>Expected output: t/Quora - will PHP die in 2018 ct/PHP is terrible blablablablabla s/quora@quora.com E/would you like to send an auto-reply to the sender? (Y/n)</code></p>
+<p><code>todo tt/Buy grocery c/Buy tomato and potato on the way back home</code></p>
 </li>
 </ul>
 </div>
@@ -700,7 +690,7 @@ e.g.<code>select 2</code></p>
 <p><strong>ExportAll</strong> : <code>exportall FILETYPE</code></p>
 </li>
 <li>
-<p><strong>Mail</strong> : <code>mail [i/INDEX]</code> (to be added)</p>
+<p><strong>Todo</strong> : <code>todo tt/TITLE c/CONTENT</code></p>
 </li>
 <li>
 <p><strong>List Schedule</strong> : <code>commonschedule p/PERSON…[PERSON] sd/START-DATE-DDMMYYYY</code> * <strong>Mail</strong> : <code>mail [i/INDEX]</code><br>
@@ -713,4 +703,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-28 19:59:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-29 09:18:10 UTC</div></div></div></body></html>
