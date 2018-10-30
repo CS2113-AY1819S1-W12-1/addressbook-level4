@@ -25,13 +25,14 @@
 <li><a href="#redoing-the-previously-undone-command-code-redo-code-code-y-code">3.10. Redoing the previously undone command : <code>redo</code> / <code>y</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code-code-c-code">3.11. Clearing all entries : <code>clear</code> / <code>c</code></a></li>
 <li><a href="#exporting-all-contacts-code-exportall-code">3.12. Exporting all contacts : <code>exportall</code></a></li>
-<li><a href="#exporting-contacts-code-export-code-coming-in-v1-4">3.13. Exporting contacts : <code>export</code> [coming in v1.4]</a></li>
-<li><a href="#enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.14. Enter or delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></li>
-<li><a href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.15. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></li>
-<li><a href="#add-to-do-task-code-todo-code">3.16. Add To-do task: <code>todo</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code-code-x-code">3.17. Exiting the program : <code>exit</code> / <code>x</code></a></li>
-<li><a href="#saving-the-data">3.18. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.19. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#exporting-all-contacts-displayed-code-export-coming-in-v1-4-code">3.13. Exporting all contacts displayed: <code>export [coming in v1.4]</code></a></li>
+<li><a href="#exporting-contact-details-of-a-selected-person-code-export-code">3.14. Exporting contact details of a selected person: <code>export</code></a></li>
+<li><a href="#enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.15. Enter or delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></li>
+<li><a href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.16. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></li>
+<li><a href="#add-to-do-task-code-todo-code">3.17. Add To-do task: <code>todo</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code-code-x-code">3.18. Exiting the program : <code>exit</code> / <code>x</code></a></li>
+<li><a href="#saving-the-data">3.19. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.20. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -460,7 +461,7 @@ Format: <code>clear</code></p>
 <div class="sect2">
 <h3 id="exporting-all-contacts-code-exportall-code"><a class="link" href="#exporting-all-contacts-code-exportall-code">3.12. Exporting all contacts : <code>exportall</code></a></h3>
 <div class="paragraph">
-<p>Export all name, phone, address and email of all persons in the address book.<br>
+<p>Export the name, phone, address and email of all persons in the addressbook under the specified filetype.<br>
 Format: <code>exportall FILETYPE</code></p>
 </div>
 <div class="paragraph">
@@ -486,10 +487,10 @@ Format: <code>exportall FILETYPE</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The csv/vcf file will be located in <code>/data/pineapple.csv</code>.</p>
+<p>The file will be located in <code>/data/addressbook.csv</code>.</p>
 </li>
 <li>
-<p>This command overwrites the previous <code>/data/pineapple.csv</code>.</p>
+<p>This command overwrites the previous <code>/data/addressbook.csv</code>.</p>
 </li>
 </ol>
 </div>
@@ -499,16 +500,29 @@ Format: <code>exportall FILETYPE</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exporting-contacts-code-export-code-coming-in-v1-4"><a class="link" href="#exporting-contacts-code-export-code-coming-in-v1-4">3.13. Exporting contacts : <code>export</code> [coming in v1.4]</a></h3>
+<h3 id="exporting-all-contacts-displayed-code-export-coming-in-v1-4-code"><a class="link" href="#exporting-all-contacts-displayed-code-export-coming-in-v1-4-code">3.13. Exporting all contacts displayed: <code>export [coming in v1.4]</code></a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="exporting-contact-details-of-a-selected-person-code-export-code"><a class="link" href="#exporting-contact-details-of-a-selected-person-code-export-code">3.14. Exporting contact details of a selected person: <code>export</code></a></h3>
 <div class="paragraph">
-<p>Export the specified persons from the address book.<br>
-Format: <code>export INDEX N FILETYPE</code></p>
+<p>Export the name, phone, address and email of the specified person from the addressbook under the specified filetype.<br>
+Format: <code>export INDEX FILETYPE</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Export <code>N</code> persons starting from the specified <code>INDEX</code>.
-The index refers to the index number shown in the most recent listing.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Export the person at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed person list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -519,19 +533,19 @@ The index refers to the index number shown in the most recent listing.</p>
 <ul>
 <li>
 <p><code>list</code><br>
-<code>export 2 1 csv</code><br>
+<code>export 2 csv</code><br>
 Exports the 2nd person in the address book as a csv file.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
-<code>export 1 5 vcf</code><br>
-Exports the five persons starting from the 1st person in the results of the <code>find</code> command as a vcf file.</p>
+<code>export 1 csv</code><br>
+Exports the 1st person starting from the 1st person in the results of the <code>find</code> command as a csv file.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4"><a class="link" href="#enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.14. Enter or delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></h3>
+<h3 id="enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4"><a class="link" href="#enter-or-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.15. Enter or delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></h3>
 <div class="paragraph">
 <p>Format:</p>
 </div>
@@ -557,7 +571,7 @@ Exports the five persons starting from the 1st person in the results of the <cod
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-common-schedule-code-commonschedule-code-coming-in-v1-4"><a class="link" href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.15. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></h3>
+<h3 id="list-common-schedule-code-commonschedule-code-coming-in-v1-4"><a class="link" href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.16. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></h3>
 <div class="paragraph">
 <p>Shows a list of common meeting time for a group of contacts and the user in that given that given period of time.<br>
 Format: <code>commonschedule p/PERSON&#8230;&#8203;[PERSON] sd/START-DATE-DDMMYYYY ed/END-DATE-DDMMYYYY t/HOURS</code></p>
@@ -574,7 +588,7 @@ Format: <code>commonschedule p/PERSON&#8230;&#8203;[PERSON] sd/START-DATE-DDMMYY
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-to-do-task-code-todo-code"><a class="link" href="#add-to-do-task-code-todo-code">3.16. Add To-do task: <code>todo</code></a></h3>
+<h3 id="add-to-do-task-code-todo-code"><a class="link" href="#add-to-do-task-code-todo-code">3.17. Add To-do task: <code>todo</code></a></h3>
 <div class="paragraph">
 <p>Adds a to-do task, the to-do list panel will display the task&#8217;s title and its content.<br>
 Format: <code>todo tt/TITLE c/CONTENT</code></p>
@@ -606,14 +620,14 @@ The user is unable to edit the content of the to-do task
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code-code-x-code"><a class="link" href="#exiting-the-program-code-exit-code-code-x-code">3.17. Exiting the program : <code>exit</code> / <code>x</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code-code-x-code"><a class="link" href="#exiting-the-program-code-exit-code-code-x-code">3.18. Exiting the program : <code>exit</code> / <code>x</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.18. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.19. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.<br>
@@ -621,7 +635,7 @@ The storage file 'addressbook.xml' is located in the project root folder.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.19. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.20. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -690,6 +704,12 @@ e.g.<code>select 2</code></p>
 <p><strong>ExportAll</strong> : <code>exportall FILETYPE</code></p>
 </li>
 <li>
+<p><strong>Export</strong> : <code>export INDEX FILETYPE</code></p>
+</li>
+<li>
+<p><strong>Mail</strong> : <code>mail [i/INDEX]</code> (to be added)</p>
+</li>
+<li>
 <p><strong>Todo</strong> : <code>todo tt/TITLE c/CONTENT</code></p>
 </li>
 <li>
@@ -703,4 +723,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-30 16:11:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-30 17:01:17 UTC</div></div></div></body></html>
