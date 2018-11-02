@@ -548,10 +548,13 @@ Exports the 1st person starting from the 1st person in the results of the <code>
 <div class="sect2">
 <h3 id="add-personal-schedule-code-schedule-code"><a class="link" href="#add-personal-schedule-code-schedule-code">3.15. Add personal schedule : <code>schedule</code></a></h3>
 <div class="paragraph">
+<p>This function enables you to add the scheduled events of a person into the selected person&#8217;s card.</p>
+</div>
+<div class="paragraph">
 <p>Format:</p>
 </div>
 <div class="paragraph">
-<p><code>schedule INDEX d/DDMMYYYY st/START-TIME et/END_TIME en/EVENT-NAME</code></p>
+<p><code>schedule IndexOfPerson d/DDMMYYYY st/START-TIME et/END_TIME en/EVENT-NAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -566,6 +569,10 @@ Exports the 1st person starting from the 1st person in the results of the <code>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>To clear the schedules, please restart the program on your end.
+Delete and clear schedules will be coming in version 1.4.</strong></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="add-and-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4"><a class="link" href="#add-and-delete-personal-weekly-schedule-code-schedule-code-coming-in-v1-4">3.16. Add and Delete personal weekly schedule : <code>schedule</code> [coming in v1.4]</a></h3>
@@ -573,8 +580,8 @@ Exports the 1st person starting from the 1st person in the results of the <code>
 <p>Format:</p>
 </div>
 <div class="paragraph">
-<p><code>addschedule INDEX d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code>
-<code>delschedule INDEX d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code></p>
+<p><code>addschedule IndexOfPerson d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code>
+<code>delschedule IndexOfPerson d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -597,7 +604,7 @@ Exports the 1st person starting from the 1st person in the results of the <code>
 <h3 id="list-common-schedule-code-commonschedule-code-coming-in-v1-4"><a class="link" href="#list-common-schedule-code-commonschedule-code-coming-in-v1-4">3.17. List Common Schedule : <code>commonschedule</code> [coming in v1.4]</a></h3>
 <div class="paragraph">
 <p>Shows a list of common meeting time for a group of contacts and the user in that given that given period of time.<br>
-Format: <code>commonschedule p/PERSON&#8230;&#8203;[PERSON] sd/START-DATE-DDMMYYYY ed/END-DATE-DDMMYYYY t/HOURS</code></p>
+Format: <code>commonschedule i/IndexOfPerson&#8230;&#8203;[INDEX] sd/START-DATE-DDMMYYYY ed/END-DATE-DDMMYYYY t/AVAIL-HOURS-REQUIRED</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -605,7 +612,7 @@ Format: <code>commonschedule p/PERSON&#8230;&#8203;[PERSON] sd/START-DATE-DDMMYY
 <div class="ulist">
 <ul>
 <li>
-<p><code>commonschedule p/John Smith p/Jane Doe sd/08092018 ed/01102018 t/1.5</code></p>
+<p><code>commonschedule i/1 i/2 i/3 sd/08092018 ed/01102018 t/1.5</code></p>
 </li>
 </ul>
 </div>
@@ -750,4 +757,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-01 13:47:43 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-02 07:15:40 UTC</div></div></div></body></html>
