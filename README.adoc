@@ -1,4 +1,6 @@
 = JitHub
+
+image:https://api.codacy.com/project/badge/Grade/914d7fa3be744c6f94f63e1671e36f5d[link="https://app.codacy.com/app/jitwei98/main?utm_source=github.com&utm_medium=referral&utm_content=CS2113-AY1819S1-W12-1/main&utm_campaign=Badge_Grade_Settings"]
 ifdef::env-github,env-browser[:relfileprefix: docs/]
 
 https://travis-ci.org/CS2113-AY1819S1-W12-1/main[image:https://travis-ci.org/se-edu/addressbook-level4.svg?branch=master[Build Status]]
