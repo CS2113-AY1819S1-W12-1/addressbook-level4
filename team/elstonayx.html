@@ -50,16 +50,47 @@ JitHub is a Java application that you can run on any machine with Java Runtime E
 <p>Highlights: write technical skills i acquired like new algorithm etc</p>
 </li>
 <li>
-<p>Credits: geekforgeeks.com for their explanation on Trie data structure which was heavily used to implement this feature.</p>
+<p>Credits:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>[<a href="https://www.geeksforgeeks.org/trie-insert-and-search/">GeeksforGeeks</a>] for their explanation on Trie data structure which was heavily used to implement this feature.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </li>
 <li>
 <p><strong>Minor enhancement</strong>: Added a wrong command suggestion when the user types in a wrong command and presses enter.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does:</p>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>]</p>
+<p>Justification:</p>
+</li>
+<li>
+<p>Highlights</p>
+</li>
+<li>
+<p>Credits:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>[<a href="https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance">trekhleb/javascript-algorithms</a>]
+for their explanation on Levenshtein distance (edit distance)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&amp;search=elstonayx">Code</a>]</p>
 </li>
 </ul>
 </div>
@@ -92,7 +123,8 @@ pressing <code>TAB</code> will auto-complete the command for you without the nee
 <ul>
 <li>
 <p>While typing <code>his</code> to get <code>history</code> command, press <code>TAB</code>. The <code>history</code> command will automatically be filled in for
-you as it is the only suggestion available.</p>
+you as it is the only suggestion available. The command parameters would then be shown as a prompt to help you with your
+input.</p>
 </li>
 <li>
 <p>While typing <code>e</code>, press <code>TAB</code>. The system will suggest to you all possible commands that start with <code>e</code>, which would
@@ -118,95 +150,6 @@ and would suggest to you the command <code>select</code> instead.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>When exporting contacts for the purpose of information transfer to another computer, encryption can be enabled before
-the export command to prevent data misuse.</p>
-</div>
-<div class="paragraph">
-<p>Command type: <code>encrypt for export</code></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">FAQ</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the
-data of your previous JitHub folder.</p>
-</div>
-<div class="paragraph">
-<p><strong>Q</strong>: How do I export my contacts to my phone?<br>
-<strong>A</strong>: Use the exportall command to generate a csv/vcf file and transfer that file to your phone. Use your phone contacts
-app to import that file.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">Command Summary</a></h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
-</li>
-<li>
-<p><strong>Clear</strong> : <code>clear</code></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>list</code></p>
-</li>
-<li>
-<p><strong>Help</strong> : <code>help</code></p>
-</li>
-<li>
-<p><strong>Select</strong> : <code>select INDEX</code><br>
-e.g.<code>select 2</code></p>
-</li>
-<li>
-<p><strong>History</strong> : <code>history</code></p>
-</li>
-<li>
-<p><strong>Undo</strong> : <code>undo</code></p>
-</li>
-<li>
-<p><strong>Redo</strong> : <code>redo</code></p>
-</li>
-<li>
-<p><strong>ExportAll</strong> : <code>exportall FILETYPE</code></p>
-</li>
-<li>
-<p><strong>Export</strong> : <code>export INDEX FILETYPE</code></p>
-</li>
-<li>
-<p><strong>Mail</strong> : <code>mail [i/INDEX]</code> (to be added)</p>
-</li>
-<li>
-<p><strong>Todo</strong> : <code>todo tt/TITLE c/CONTENT</code></p>
-</li>
-<li>
-<p><strong>List Schedule</strong> : <code>commonschedule p/PERSON…[PERSON] sd/START-DATE-DDMMYYYY</code> * <strong>Mail</strong> : <code>mail [i/INDEX]</code><br>
-(to be added)</p>
-</li>
-<li>
-<p><strong>Add Schedule</strong> : <code>addschedule d/DDMMYYYY st/START-TIME et/END-TIME en/EVENT-NAME</code> * <strong>Mail</strong> : <code>mail [i/INDEX]</code><br>
-(to be added)</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -226,7 +169,8 @@ e.g.<code>select 2</code></p>
 <div class="sect2">
 <h3 id="suggestions-feature"><a class="link" href="#suggestions-feature">Suggestions Feature</a></h3>
 <div class="paragraph">
-<p>Gives helpful suggestions to users on commands to type.</p>
+<p>The suggestions feature gives users helpful suggestions on what command to type, and corrections for commands when incorrect
+commands are being entered.</p>
 </div>
 <div class="sect3">
 <h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
@@ -234,14 +178,173 @@ e.g.<code>select 2</code></p>
 <p>There are two instances when suggestions are given.</p>
 </div>
 <div class="paragraph">
-<p>Firstly, when a user completes entering a command (after pressing ENTER key), if the command typed is invalid, the system
-will suggest a similar command based on the edit distance.</p>
+<p>Firstly, when a user completes entering a command (after pressing <code>ENTER</code> key), if the command typed is invalid, such as
+commands being misspelt, the system will suggest a similar command based on the edit distance (which will be explained later).</p>
 </div>
 <div class="paragraph">
 <p>The second instance would be when the user presses tab while typing the command halfway. The system will suggest commands
-based on the current prefix string.</p>
+based on the current prefix string. If only a single command is available, the command would be completed for the user,
+and the system would show the parameters required for that command.</p>
+</div>
+<div class="sect4">
+<h5 id="wrong-command-suggestion"><a class="link" href="#wrong-command-suggestion">Wrong Command Suggestion</a></h5>
+<div class="paragraph">
+<p>Given below is an example usage of how the WrongCommandSuggestion behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1: The user would type in a misspelt command string into the Command Box pane.</p>
+</div>
+<div class="paragraph">
+<p>Step 2: The command would be parsed into the AddressBookParser class. Since no commands match the word exactly, it would
+fall into the default case.</p>
+</div>
+<div class="paragraph">
+<p>Step 3: The default case would extract out only the command portion of the user input, and input it into the
+WrongCommandSuggestion class.</p>
+</div>
+<div class="paragraph">
+<p>Step 4: WrongCommandSuggestion would then instantiate the StringSimilarity class to find the nearest match of a word.</p>
+</div>
+<div class="paragraph">
+<p>Step 5: editDistance in StringSimliarity class would be called to find out the edit distance between two words. These two
+words would be the wrong command the user has input, and the list of available commands in the whole application.</p>
+</div>
+<div class="paragraph">
+<p>Step 6: WrongCommandSuggestion would then compare if the edit distance of the current command is shorter than the current
+shortest edit distance command (which is initialised to 5 edits). If it is shorter, it would then suggest the current command.</p>
+</div>
+<div class="paragraph">
+<p>Step 7: WrongCommandSuggestion would then return the suggestion in a string, which would then be inputted into the CommandException,
+to be thrown to the LogicManager class.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows an example of how the WrongCommandSuggestion operation works with
+misspelt command "histary" (closest command is <code>history</code>):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/WrongCommandSuggestionSequenceDiagram.png" alt="WrongCommandSuggestionSequenceDiagram" width="1000">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="input-command-suggestion"><a class="link" href="#input-command-suggestion">Input Command Suggestion</a></h5>
+<div class="paragraph">
+<p>Given below is an example of how the InputCommandSuggestion behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Upon instantiation of CommandBox during the program instantiation phase, CommandBox will create an instance of
+InputCommandSuggestion, which will create a Trie containing all the commands available in the application.</p>
+</div>
+<div class="paragraph">
+<p>Step 2: When the user presses <code>TAB</code> after entering a command, CommandBox will call method <code>handleTabPressed()</code> to fetch
+the current input that the user has typed.</p>
+</div>
+<div class="paragraph">
+<p>Step 3: <code>handleTabPressed()</code> method will then call the <code>getSuggestedCommands()</code> method in InputCommandSuggestion, while
+inputting the user&#8217;s input into the parameters.</p>
+</div>
+<div class="paragraph">
+<p>Step 4: The InputCommandSuggestion would then find available commands using the Trie class and determine whether there
+are any other possible combinations of commands with the current string of words.</p>
+</div>
+<div class="paragraph">
+<p>Step 5: The Trie class would then return a list of commands available, which would then pass back to CommandBox.</p>
+</div>
+<div class="paragraph">
+<p>Step 6a: If there is only one command available, CommandBox would auto-complete the current input with the valid command,
+then request for the Command Parameters through the InputCommandSuggestion class. It would then pass the string to be
+posted on EventsCenter, so that the Command Parameters would be displayed on the results panel.</p>
+</div>
+<div class="paragraph">
+<p>Step 6b: If there are multiple commands available, CommandBox will pass all the possible commands to EventsCenter, to
+output all possible commands available with the current string.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows an example of how the InputCommandSuggestion class works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/InputCommandSuggestionSequenceDiagram.png" alt="InputCommandSuggestionSequenceDiagram" width="1000">
 </div>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 05:52:53 UTC</div></div></div></body></html>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="paragraph">
+<p>For the WrongCommandSuggestion implementation, there were multiple design considerations while implementing the feature.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1:</strong> Compare the input command and the actual command character by character and see
+which command has the most matches.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement.</p>
+</li>
+<li>
+<p>Cons: Not as accurate or reliable in terms of giving a correct match of command.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2 (current choice):</strong> Use a string matching algorithm to implement the matching and difference
+calculation between the command and the user input.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Accurate prediction or suggestions from actual commands.</p>
+</li>
+<li>
+<p>Cons: Difficult to implement, and might require more processing overhead.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the InputCommandSuggestion implementation, there were multiple design considerations while implementing the feature.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1:</strong> While the user types, command suggestions would be given continuously with regards
+to the user&#8217;s input.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Makes it more convenient for typing in commands as there is immediate response of the correctness of the command.</p>
+</li>
+<li>
+<p>Cons: May have performance issues in terms of memory usage, complicated to implement, and requires a lot of work on
+the UI for the application.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2 (current choice):</strong> When the user requires corrections to the command or requires feedback, press <code>TAB</code>
+key to receive suggestions given by the system.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Less overhead to the system as the system does not have to constantly run the algorithm to check for valid and
+available commands.</p>
+</li>
+<li>
+<p>Cons: Feedback is less responsive, and requires additional keys for users to press.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 15:05:08 UTC</div></div></div></body></html>
