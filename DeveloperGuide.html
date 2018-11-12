@@ -77,7 +77,9 @@
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">F.1. Launch and Shutdown</a></li>
 <li><a href="#deleting-a-person">F.2. Deleting a person</a></li>
-<li><a href="#saving-data">F.3. Saving data</a></li>
+<li><a href="#getting-an-wrong-command-suggestion">F.3. Getting an Wrong Command Suggestion</a></li>
+<li><a href="#getting-an-input-command-suggestion">F.4. Getting an Input Command Suggestion</a></li>
+<li><a href="#saving-data">F.5. Saving data</a></li>
 </ul>
 </li>
 </ul>
@@ -2265,6 +2267,68 @@ details manually</p></td>
 </li>
 </ul>
 </div>
+<h3 id="use-case-get-suggestions" class="discrete">Use case: Get Suggestions</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User types a command and presses TAB to get suggestions.</p>
+</li>
+<li>
+<p>Jithub shows a list of possible commands.</p>
+</li>
+<li>
+<p>User continues typing the command to completion and presses TAB.</p>
+</li>
+<li>
+<p>Jithub shows the parameters required for the command.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. There are no commands available to suggest.</p>
+<div class="paragraph">
+<p>Use case resumes at step 1.</p>
+</div>
+</li>
+<li>
+<p>2b. There is only one command available to suggest.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. JitHub completes the command input and shows the parameters required.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The given index is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. AddressBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2398,12 +2462,57 @@ Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
+<div class="sect2">
+<h3 id="getting-an-wrong-command-suggestion"><a class="link" href="#getting-an-wrong-command-suggestion">F.3. Getting an Wrong Command Suggestion</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Getting a nearest command suggestion after entering the keyed input.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>delet</code> followed by <code>ENTER</code> key<br>
+Expected: Result bar would show that the current input is an unknown command. It would then suggest
+ command <code>delete</code> in the next line.<br>
+ Expected: Result bar might show multiple commands to suggest if available.</p>
+</li>
+<li>
+<p>Other suggestions to try: <code>schedulee</code>, <code>expart</code>, etc<br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">F.3. Saving data</a></h3>
+<h3 id="getting-an-input-command-suggestion"><a class="link" href="#getting-an-input-command-suggestion">F.4. Getting an Input Command Suggestion</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Getting a command suggestion while typing the desired command.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>a</code> followed by <code>TAB</code> key<br>
+Expected: Command bar would complete the only command starting with <code>a</code> available, which is <code>add</code>.
+ It would then show the parameters of <code>add</code> command. in the results bar.<br>
+ Expected: Result bar might show multiple commands if available, and not complete the command when so.</p>
+</li>
+<li>
+<p>Other suggestions to try: <code>ex</code>, <code>s</code>, etc<br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-data"><a class="link" href="#saving-data">F.5. Saving data</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2423,4 +2532,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:53:50 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:05:25 UTC</div></div></div></body></html>
