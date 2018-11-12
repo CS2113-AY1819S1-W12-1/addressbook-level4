@@ -32,14 +32,16 @@
 <li><a href="#clear-personal-weekly-schedule-code-clearschedule-code-code-cs-code">3.17. Clear personal weekly schedule : <code>clearSchedule</code> / <code>cs</code></a></li>
 <li><a href="#list-common-schedule-code-matchschedule-code-code-ms-code">3.18. List Common Schedule : <code>matchSchedule</code> / <code>ms</code></a></li>
 <li><a href="#add-to-do-task-code-todo-code">3.19. Add To-do task: <code>todo</code></a></li>
-<li><a href="#add-reminder-code-reminder-code-coming-in-v1-4">3.20. Add Reminder: <code>reminder</code> [coming in v1.4]</a></li>
-<li><a href="#meeting-minutes-code-minutes-code-coming-in-v1-4">3.21. Meeting Minutes: <code>minutes</code> [coming in v1.4]</a></li>
-<li><a href="#exiting-the-program-code-exit-code-code-x-code">3.22. Exiting the program : <code>exit</code> / <code>x</code></a></li>
-<li><a href="#saving-the-data">3.23. Saving the data</a></li>
-<li><a href="#getting-smart-suggestions">3.24. Getting Smart Suggestions</a></li>
-<li><a href="#getting-wrong-command-suggestions">3.25. Getting Wrong Command Suggestions</a></li>
-<li><a href="#calendar-to-view-schedule-coming-in-v2-0">3.26. Calendar to view schedule [Coming in V2.0]</a></li>
-<li><a href="#encryption-coming-in-v2-0">3.27. Encryption [Coming in V2.0]</a></li>
+<li><a href="#finish-to-do-task-code-finishtodo-code">3.20. Finish To-do task: <code>finishTodo</code></a></li>
+<li><a href="#add-reminder-code-reminder-code-coming-in-v1-4">3.21. Add Reminder: <code>reminder</code> [coming in v1.4]</a></li>
+<li><a href="#meeting-minutes-code-minutes-code-coming-in-v1-4">3.22. Meeting Minutes: <code>minutes</code> [coming in v1.4]</a></li>
+<li><a href="#exiting-the-program-code-exit-code-code-x-code">3.23. Exiting the program : <code>exit</code> / <code>x</code></a></li>
+<li><a href="#saving-the-data">3.24. Saving the data</a></li>
+<li><a href="#getting-smart-suggestions">3.25. Getting Smart Suggestions</a></li>
+<li><a href="#getting-wrong-command-suggestions">3.26. Getting Wrong Command Suggestions</a></li>
+<li><a href="#monthly-calendar-view">3.27. Monthly Calendar View</a></li>
+<li><a href="#calendar-to-view-schedule-coming-in-v2-0">3.28. Calendar to view schedule [Coming in V2.0]</a></li>
+<li><a href="#encryption-coming-in-v2-0">3.29. Encryption [Coming in V2.0]</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -663,9 +665,65 @@ Format: <code>todo tt/TITLE c/CONTENT</code></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>The following diagram illustrates how the <code>todo</code> is being used on the JitHub CLI-GUI app:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/TodoUsage1.png" alt="TodoUsage1" width="1000">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/TodoUsage2.png" alt="TodoUsage2" width="200">
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="add-reminder-code-reminder-code-coming-in-v1-4"><a class="link" href="#add-reminder-code-reminder-code-coming-in-v1-4">3.20. Add Reminder: <code>reminder</code> [coming in v1.4]</a></h3>
+<h3 id="finish-to-do-task-code-finishtodo-code"><a class="link" href="#finish-to-do-task-code-finishtodo-code">3.20. Finish To-do task: <code>finishTodo</code></a></h3>
+<div class="paragraph">
+<p>Complete a to-do task, and the to-do list panel will re-render the remaining unfinished to-do tasks.<br>
+Format: <code>finishTodo INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>finishTodo 1</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The completed to-do task will be removed from your JitHub.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following diagram illustrates how the <code>finishTodo</code> is being used on the JitHub CLI-GUI app:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/FinishTodoUsage.png" alt="FinishTodoUsage" width="1000">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-reminder-code-reminder-code-coming-in-v1-4"><a class="link" href="#add-reminder-code-reminder-code-coming-in-v1-4">3.21. Add Reminder: <code>reminder</code> [coming in v1.4]</a></h3>
 <div class="paragraph">
 <p>Adds a Reminder for your next meeting, along with details to be displayed</p>
 </div>
@@ -684,7 +742,7 @@ Format: <code>todo tt/TITLE c/CONTENT</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="meeting-minutes-code-minutes-code-coming-in-v1-4"><a class="link" href="#meeting-minutes-code-minutes-code-coming-in-v1-4">3.21. Meeting Minutes: <code>minutes</code> [coming in v1.4]</a></h3>
+<h3 id="meeting-minutes-code-minutes-code-coming-in-v1-4"><a class="link" href="#meeting-minutes-code-minutes-code-coming-in-v1-4">3.22. Meeting Minutes: <code>minutes</code> [coming in v1.4]</a></h3>
 <div class="paragraph">
 <p>Opens up a text box to take meeting minutes</p>
 </div>
@@ -693,14 +751,14 @@ Format: <code>todo tt/TITLE c/CONTENT</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code-code-x-code"><a class="link" href="#exiting-the-program-code-exit-code-code-x-code">3.22. Exiting the program : <code>exit</code> / <code>x</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code-code-x-code"><a class="link" href="#exiting-the-program-code-exit-code-code-x-code">3.23. Exiting the program : <code>exit</code> / <code>x</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.23. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.24. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.<br>
@@ -708,7 +766,7 @@ The storage file 'addressbook.xml' is located in the project root folder.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="getting-smart-suggestions"><a class="link" href="#getting-smart-suggestions">3.24. Getting Smart Suggestions</a></h3>
+<h3 id="getting-smart-suggestions"><a class="link" href="#getting-smart-suggestions">3.25. Getting Smart Suggestions</a></h3>
 <div class="paragraph">
 <p>Receive smart suggestions while typing in your commands. Press the <code>TAB</code> key while typing a command halfway to get
 suggestions on possible commands without having to navigate to the help window. If only one command is available,
@@ -732,7 +790,7 @@ be <code>exportall</code>, <code>exit</code>, and <code>edit</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="getting-wrong-command-suggestions"><a class="link" href="#getting-wrong-command-suggestions">3.25. Getting Wrong Command Suggestions</a></h3>
+<h3 id="getting-wrong-command-suggestions"><a class="link" href="#getting-wrong-command-suggestions">3.26. Getting Wrong Command Suggestions</a></h3>
 <div class="paragraph">
 <p>Should you type in a wrong command, fear not, as our system will automatically suggest to you what you have typed wrongly,
 by giving you a closest approximation of word through the message box after you press enter.</p>
@@ -750,7 +808,21 @@ and would suggest to you the command <code>select</code> instead.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="calendar-to-view-schedule-coming-in-v2-0"><a class="link" href="#calendar-to-view-schedule-coming-in-v2-0">3.26. Calendar to view schedule [Coming in V2.0]</a></h3>
+<h3 id="monthly-calendar-view"><a class="link" href="#monthly-calendar-view">3.27. Monthly Calendar View</a></h3>
+<div class="paragraph">
+<p>Once you start running the application and select a person from the person list panel, the calendar of the current month will be displayed on the calendar panel.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram shows how the calendar looks like for November 2018.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CalendarView.png" alt="CalendarView" width="500">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="calendar-to-view-schedule-coming-in-v2-0"><a class="link" href="#calendar-to-view-schedule-coming-in-v2-0">3.28. Calendar to view schedule [Coming in V2.0]</a></h3>
 <div class="paragraph">
 <p>When selecting a person, the scheduled events are to be displayed on the calendar panel.
 Command type: <code>select INDEX</code></p>
@@ -761,7 +833,7 @@ Command type: <code>matchSchedule d/SELECTED-DATE st/START-TIME et/END-TIME i/IN
 </div>
 </div>
 <div class="sect2">
-<h3 id="encryption-coming-in-v2-0"><a class="link" href="#encryption-coming-in-v2-0">3.27. Encryption [Coming in V2.0]</a></h3>
+<h3 id="encryption-coming-in-v2-0"><a class="link" href="#encryption-coming-in-v2-0">3.29. Encryption [Coming in V2.0]</a></h3>
 <div class="paragraph">
 <p>When exporting contacts for the purpose of information transfer to another computer, encryption can be enabled before
 the export command to prevent data misuse.</p>
@@ -843,6 +915,9 @@ e.g.<code>select 2</code></p>
 <p><strong>Todo</strong> : <code>todo tt/TITLE c/CONTENT</code></p>
 </li>
 <li>
+<p><strong>FinishTodo</strong> : <code>finishTodo INDEX</code></p>
+</li>
+<li>
 <p><strong>Schedule</strong> : <code>schedule INDEX-OF-PERSON d/DATE(DDMMYYYY) st/START-TIME et/END_TIME en/EVENT-NAME</code></p>
 </li>
 <li>
@@ -857,4 +932,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:11:47 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:36:36 UTC</div></div></div></body></html>
