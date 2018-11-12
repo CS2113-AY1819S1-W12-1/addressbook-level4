@@ -25,9 +25,9 @@
 <li><a href="#redoing-the-previously-undone-command-code-redo-code-code-y-code">3.10. Redoing the previously undone command : <code>redo</code> / <code>y</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code-code-c-code">3.11. Clearing all entries : <code>clear</code> / <code>c</code></a></li>
 <li><a href="#searching-for-person-s-photograph">3.12. Searching for person&#8217;s photograph</a></li>
-<li><a href="#exporting-all-contacts-code-exportall-code">3.13. Exporting all contacts : <code>exportall</code></a></li>
-<li><a href="#exporting-all-contacts-displayed-code-export-coming-in-v1-4-code">3.14. Exporting all contacts displayed: <code>export [coming in v1.4]</code></a></li>
-<li><a href="#exporting-contact-details-of-a-selected-person-code-export-code">3.15. Exporting contact details of a selected person: <code>export</code></a></li>
+<li><a href="#export">3.13. Export contacts displayed: <code>export</code></a></li>
+<li><a href="#exportall">3.14. Exporting all contacts : <code>exportall</code></a></li>
+<li><a href="#import">3.15. Import contacts: <code>import</code></a></li>
 <li><a href="#add-personal-schedule-code-schedule-code-code-sc-code">3.16. Add personal schedule : <code>schedule</code> / <code>sc</code></a></li>
 <li><a href="#clear-personal-weekly-schedule-code-clearschedule-code-code-cs-code">3.17. Clear personal weekly schedule : <code>clearSchedule</code> / <code>cs</code></a></li>
 <li><a href="#list-common-schedule-code-matchschedule-code-code-ms-code">3.18. List Common Schedule : <code>matchSchedule</code> / <code>ms</code></a></li>
@@ -278,8 +278,14 @@ Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 <div class="sect2">
 <h3 id="deleting-a-person-code-delete-code-code-d-code"><a class="link" href="#deleting-a-person-code-delete-code-code-d-code">3.6. Deleting a person : <code>delete</code> / <code>d</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
-Format: <code>delete INDEX</code></p>
+<p>Deletes the specified person from the address book.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>delete INDEX</code></p>
+</div>
+</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -319,8 +325,14 @@ Deletes the 1st person in the results of the <code>find</code> command.</p>
 <div class="sect2">
 <h3 id="selecting-a-person-code-select-code-code-s-code"><a class="link" href="#selecting-a-person-code-select-code-code-s-code">3.7. Selecting a person : <code>select</code> / <code>s</code></a></h3>
 <div class="paragraph">
-<p>Selects the person identified by the index number used in the displayed person list.<br>
-Format: <code>select INDEX</code></p>
+<p>Selects the person identified by the index number used in the displayed person list.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>select INDEX</code></p>
+</div>
+</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -365,8 +377,14 @@ For additional calendar features, please view <code>calendar to view schedule</c
 <div class="sect2">
 <h3 id="listing-entered-commands-code-history-code-code-hs-code"><a class="link" href="#listing-entered-commands-code-history-code-code-hs-code">3.8. Listing entered commands : <code>history</code> / <code>hs</code></a></h3>
 <div class="paragraph">
-<p>Lists all the commands that you have entered in reverse chronological order.<br>
-Format: <code>history</code></p>
+<p>Lists all the commands that you have entered in reverse chronological order.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>history</code></p>
+</div>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -386,8 +404,14 @@ Format: <code>history</code></p>
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code-code-z-code"><a class="link" href="#undoing-previous-command-code-undo-code-code-z-code">3.9. Undoing previous command : <code>undo</code> / <code>z</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
-Format: <code>undo</code></p>
+<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>undo</code></p>
+</div>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -431,8 +455,14 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 <div class="sect2">
 <h3 id="redoing-the-previously-undone-command-code-redo-code-code-y-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code-code-y-code">3.10. Redoing the previously undone command : <code>redo</code> / <code>y</code></a></h3>
 <div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
-Format: <code>redo</code></p>
+<p>Reverses the most recent <code>undo</code> command.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>redo</code></p>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -463,8 +493,14 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 <div class="sect2">
 <h3 id="clearing-all-entries-code-clear-code-code-c-code"><a class="link" href="#clearing-all-entries-code-clear-code-code-c-code">3.11. Clearing all entries : <code>clear</code> / <code>c</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
+<p>Clears all entries from the address book.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>clear</code></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -479,8 +515,12 @@ Format: <code>clear</code></p>
 </li>
 </ul>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>Format:</p>
+</div>
+</div>
 </div>
 <div class="ulist">
 <ul>
@@ -491,21 +531,32 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exporting-all-contacts-code-exportall-code"><a class="link" href="#exporting-all-contacts-code-exportall-code">3.13. Exporting all contacts : <code>exportall</code></a></h3>
+<h3 id="export"><a class="link" href="#export">3.13. Export contacts displayed: <code>export</code></a></h3>
 <div class="paragraph">
-<p>Export the name, phone, address and email of all persons in the addressbook under the specified filetype.<br>
-Format: <code>exportall FILETYPE</code></p>
+<p>You can save the hassle of your group mates typing in the exact same contact details of your group members if you
+ have already save them into your JitHub.</p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>To do so, simply <strong>find</strong> the person(s) and <strong>export</strong> the contact details in JitHub to a
+file and share it with your group mates.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>export FILENAME.xml</code></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:<br></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>exportall csv</code></p>
+<p><code>find Alex</code><br></p>
 </li>
 <li>
-<p><code>exportall vcf</code> [coming in v1.4]</p>
+<p><code>export alex.xml</code></p>
 </li>
 </ul>
 </div>
@@ -519,10 +570,65 @@ Format: <code>exportall FILETYPE</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The file will be located in <code>/data/addressbook.csv</code>.</p>
+<p>The file will be located in <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/FILENAME.xml</code></p>
 </li>
 <li>
-<p>This command overwrites the previous <code>/data/addressbook.csv</code>.</p>
+<p>This command overwrites any files with the same name at <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/</code></p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Your team members can import the contact details to their JitHub. Please refer to <a href="#import">Section 3.15, &#8220;Import contacts: <code>import</code>&#8221;</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exportall"><a class="link" href="#exportall">3.14. Exporting all contacts : <code>exportall</code></a></h3>
+<div class="paragraph">
+<p>Export the name, phone, address and email of all persons in the addressbook under the specified filetype.<br>
+Format: <code>exportall FILETYPE</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>exportall csv</code></p>
+</li>
+<li>
+<p><code>exportall vcf</code> [coming in v2.0]</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The file will be located in <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/jithub.csv</code>.</p>
+</li>
+<li>
+<p>This command overwrites the previous <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/jithub.csv</code>.</p>
 </li>
 </ol>
 </div>
@@ -532,48 +638,71 @@ Format: <code>exportall FILETYPE</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exporting-all-contacts-displayed-code-export-coming-in-v1-4-code"><a class="link" href="#exporting-all-contacts-displayed-code-export-coming-in-v1-4-code">3.14. Exporting all contacts displayed: <code>export [coming in v1.4]</code></a></h3>
-
-</div>
-<div class="sect2">
-<h3 id="exporting-contact-details-of-a-selected-person-code-export-code"><a class="link" href="#exporting-contact-details-of-a-selected-person-code-export-code">3.15. Exporting contact details of a selected person: <code>export</code></a></h3>
+<h3 id="import"><a class="link" href="#import">3.15. Import contacts: <code>import</code></a></h3>
 <div class="paragraph">
-<p>Export the name, phone, address and email of the specified person from the addressbook under the specified filetype.<br>
-Format: <code>export INDEX FILETYPE</code></p>
+<p>You can save the hassle of typing in the exact same contact details of your group members if one of your group members
+ have already save them into his/her JitHub.</p>
 </div>
-<div class="sidebarblock">
+<div class="paragraph">
+<p>To do so, politely ask them to <strong>export</strong> the contact details and place the file your teammate exported into the
+<code>/data/</code> of your JitHub
+and <strong>import</strong> it into your JitHub.<br></p>
+</div>
+<div class="exampleblock">
 <div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Export the person at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed person list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Format: <code>import FILENAME.xml</code></p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Examples:<br></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>export 2 csv</code><br>
-Exports the 2nd person in the address book as a csv file.</p>
-</li>
-<li>
-<p><code>find Betsy</code><br>
-<code>export 1 csv</code><br>
-Exports the 1st person starting from the 1st person in the results of the <code>find</code> command as a csv file.</p>
+<p><code>import alex.xml</code></p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The file to import must be placed in <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/</code></p>
+</li>
+<li>
+<p>Persons that already exist in your JitHub won&#8217;t be imported.
+To import an existing person in JitHub with different contact details, please <code>delete</code> them first.</p>
+</li>
+<li>
+<p>The <code>undo</code> command works with the <code>import</code> command.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can refer to <a href="#export">Section 3.13, &#8220;Export contacts displayed: <code>export</code>&#8221;</a> for instructions on how to export contact details.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -581,11 +710,12 @@ Exports the 1st person starting from the 1st person in the results of the <code>
 <div class="paragraph">
 <p>This function enables you to add the scheduled events of a person into the selected person&#8217;s card.</p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p>Format:</p>
+<p>Format: <code>schedule INDEX-OF-PERSON d/DATE(DDMMYYYY) st/START-TIME et/END_TIME en/EVENT-NAME</code></p>
 </div>
-<div class="paragraph">
-<p><code>schedule INDEX-OF-PERSON d/DATE(DDMMYYYY) st/START-TIME et/END_TIME en/EVENT-NAME</code></p>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -607,11 +737,13 @@ This issue will be fixed in V2.0.</strong></p>
 </div>
 <div class="sect2">
 <h3 id="clear-personal-weekly-schedule-code-clearschedule-code-code-cs-code"><a class="link" href="#clear-personal-weekly-schedule-code-clearschedule-code-code-cs-code">3.17. Clear personal weekly schedule : <code>clearSchedule</code> / <code>cs</code></a></h3>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p>Format:</p>
+<p>Format:
+<code>clearSchedule IndexOfPerson</code></p>
 </div>
-<div class="paragraph">
-<p><code>clearSchedule IndexOfPerson</code></p>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -627,8 +759,14 @@ This issue will be fixed in V2.0.</strong></p>
 <div class="sect2">
 <h3 id="list-common-schedule-code-matchschedule-code-code-ms-code"><a class="link" href="#list-common-schedule-code-matchschedule-code-code-ms-code">3.18. List Common Schedule : <code>matchSchedule</code> / <code>ms</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of common meeting time for a group of contacts and the user in that given that given period of time.<br>
-Format: <code>matchSchedule d/SELECTED-DATE st/START-TIME et/END-TIME i/INDEX-OF-PERSON&#8230;&#8203;[INDEX]</code></p>
+<p>Shows a list of common meeting time for a group of contacts and the user in that given that given period of time.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>matchSchedule d/SELECTED-DATE st/START-TIME et/END-TIME i/INDEX-OF-PERSON&#8230;&#8203;[INDEX]</code></p>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -644,8 +782,14 @@ Format: <code>matchSchedule d/SELECTED-DATE st/START-TIME et/END-TIME i/INDEX-OF
 <div class="sect2">
 <h3 id="add-to-do-task-code-todo-code"><a class="link" href="#add-to-do-task-code-todo-code">3.19. Add To-do task: <code>todo</code></a></h3>
 <div class="paragraph">
-<p>Adds a to-do task, the to-do list panel will display the task&#8217;s title and its content.<br>
-Format: <code>todo tt/TITLE c/CONTENT</code></p>
+<p>Adds a to-do task, the to-do list panel will display the task&#8217;s title and its content.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>todo tt/TITLE c/CONTENT</code></p>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -813,16 +957,22 @@ Format: <code>reminder tt/TITLE d/DATE(DDMMYYYY) st/START_TIME ag/AGENDA</code><
 <div class="sect2">
 <h3 id="exiting-the-program-code-exit-code-code-x-code"><a class="link" href="#exiting-the-program-code-exit-code-code-x-code">3.22. Exiting the program : <code>exit</code> / <code>x</code></a></h3>
 <div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
+<p>Exits the program.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>exit</code></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.23. Saving the data</a></h3>
 <div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
+<p>JitHub data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.<br>
-The storage file 'addressbook.xml' is located in the project root folder.</p>
+The storage file 'jithub.xml' is located in the project root folder.</p>
 </div>
 </div>
 <div class="sect2">
@@ -927,7 +1077,7 @@ data of your previous JitHub folder.</p>
 </div>
 <div class="paragraph">
 <p><strong>Q</strong>: How do I export my contacts to my phone?<br>
-<strong>A</strong>: Use the exportall command to generate a csv/vcf file and transfer that file to your phone. Use your phone contacts
+<strong>A</strong>: Use the <code>exportall</code> command to generate a csv file and transfer that file to your phone. Use your phone contacts
 app to import that file.</p>
 </div>
 </div>
@@ -976,10 +1126,14 @@ e.g.<code>select 2</code></p>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
 <li>
-<p><strong>ExportAll</strong> : <code>exportall FILETYPE</code></p>
+<p><strong>Export</strong> : <code>export FILENAME.xml</code></p>
 </li>
 <li>
-<p><strong>Export</strong> : <code>export INDEX FILETYPE</code></p>
+<p><strong>Import</strong> : <code>import FILENAME.xml</code></p>
+</li>
+<li>
+<p><strong>ExportAll</strong> : <code>exportall FILETYPE</code><br>
+e.g. <code>exportall csv</code></p>
 </li>
 <li>
 <p><strong>Mail</strong> : <code>mail [i/INDEX]</code> (to be added)</p>
@@ -1008,4 +1162,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:51:17 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:56:25 UTC</div></div></div></body></html>

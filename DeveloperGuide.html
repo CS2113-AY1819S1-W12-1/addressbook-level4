@@ -24,13 +24,15 @@
 <li><a href="#Design-Logic">2.3. Logic component</a></li>
 <li><a href="#Design-Model">2.4. Model component</a></li>
 <li><a href="#Design-Storage">2.5. Storage component</a></li>
-<li><a href="#Design-Commons">2.6. Common classes</a></li>
+<li><a href="#Design-Export">2.6. Export component</a></li>
+<li><a href="#Design-Import">2.7. Import component</a></li>
+<li><a href="#Design-Commons">2.8. Common classes</a></li>
 </ul>
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#undo-redo-feature">3.1. Undo/Redo feature</a></li>
-<li><a href="#exportall-feature">3.2. ExportAll Feature</a></li>
+<li><a href="#exportall">3.2. ExportAll feature</a></li>
 <li><a href="#todo-feature">3.3. Todo Feature</a></li>
 <li><a href="#finishtodo-feature">3.4. FinishTodo Feature</a></li>
 <li><a href="#suggestions-feature">3.5. Suggestions Feature</a></li>
@@ -81,7 +83,7 @@
 <li><a href="#deleting-a-person">F.2. Deleting a person</a></li>
 <li><a href="#getting-an-wrong-command-suggestion">F.3. Getting an Wrong Command Suggestion</a></li>
 <li><a href="#getting-an-input-command-suggestion">F.4. Getting an Input Command Suggestion</a></li>
-<li><a href="#saving-data">F.5. Saving data</a></li>
+<li><a href="#exporting-and-importing-data">F.5. Exporting and importing data</a></li>
 </ul>
 </li>
 </ul>
@@ -578,7 +580,51 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.6. Common classes</a></h3>
+<h3 id="Design-Export"><a class="link" href="#Design-Export">2.6. Export component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/ExportClassDiagram.png" alt="ExportClassDiagram" width="800">
+</div>
+<div class="title">Figure 10. Structure of the Export Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="https://github.com/CS2113-AY1819S1-W12-1/main/src/main/java/seedu/address/export/Export.java"><code>Export.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Export</code> component can save the filtered persons to the specified file in xml format.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Design-Import"><a class="link" href="#Design-Import">2.7. Import component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/ImportClassDiagram.png" alt="ImportClassDiagram" width="800">
+</div>
+<div class="title">Figure 11. Structure of the Import Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="https://github.com/CS2113-AY1819S1-W12-1/main/src/main/java/seedu/address/export/Import.java"><code>Import.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Import</code> component can read the Address Book data from the specified file in xml format.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The import component (Import.java and ImportManager.java) is packaged under the export package.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.8. Common classes</a></h3>
 <div class="paragraph">
 <p>Classes used by multiple components are in the <code>seedu.addressbook.commons</code> package.</p>
 </div>
@@ -794,19 +840,19 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="exportall-feature"><a class="link" href="#exportall-feature">3.2. ExportAll Feature</a></h3>
+<h3 id="exportall"><a class="link" href="#exportall">3.2. ExportAll feature</a></h3>
 <div class="sect3">
 <h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.2.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The exportall mechanism is facilitated by <code>CsvWriter</code>. Internally, a CSVWriter object from the <a href="http://opencsv.sourceforge.net/">OpenCSV</a>
-library is instantiated to write all persons to the default file path <code>/data/addressbook.csv</code>. Currently, it implements
+library is instantiated to write all persons to the default file path <code>/data/jithub.csv</code>. Currently, it implements
  the following operation(s):</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p><code>CsvWriter#write()</code>&#8201;&#8212;&#8201;Writes the name, phone, address, and email of all persons in the current address book to
-<code>/data/addressbook.csv</code>, and overwrites the file if an older version is available.</p>
+<code>/data/jithub.csv</code>, and overwrites the file if an older version is available.</p>
 </li>
 </ul>
 </div>
@@ -845,7 +891,7 @@ interface.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The file path is defined in <code>outputFilepath</code>, and is hardcoded as <code>/data/addressbook.csv</code> for now.
+The file path is defined in <code>outputFilepath</code>, and is hardcoded as <code>/data/jithub.csv</code> for now.
 </td>
 </tr>
 </table>
@@ -857,7 +903,7 @@ The file path is defined in <code>outputFilepath</code>, and is hardcoded as <co
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Any existing file named as <code>addressbook.csv</code> at the defined path will be overwritten.
+Any existing file named as <code>jithub.csv</code> at the defined path will be overwritten.
 </td>
 </tr>
 </table>
@@ -872,7 +918,7 @@ Any existing file named as <code>addressbook.csv</code> at the defined path will
 </div>
 </div>
 <div class="sect3">
-<h4 id="write"><a class="link" href="#write">3.2.2. write()</a></h4>
+<h4 id="implementation-of-csvwriter-write"><a class="link" href="#implementation-of-csvwriter-write">3.2.2. Implementation of CsvWriter#write()</a></h4>
 <div class="paragraph">
 <p>Given below is the algorithm behind the write() method used in the <code>ExportAll</code> Command:</p>
 </div>
@@ -1312,7 +1358,7 @@ to keep track of events and allow for searching of common available time slots l
 <div class="content">
 <img src="images/ScheduleSequenceDiagram.png" alt="ScheduleSequenceDiagram" width="1000">
 </div>
-<div class="title">Figure 10. Schedule sequence diagram</div>
+<div class="title">Figure 12. Schedule sequence diagram</div>
 </div>
 </div>
 <div class="sect3">
@@ -1496,7 +1542,7 @@ correct date.</p>
 <div class="content">
 <img src="images/FutureCalendarUI.png" alt="FutureCalendarUI" width="380">
 </div>
-<div class="title">Figure 11. Calendar UI Component</div>
+<div class="title">Figure 13. Calendar UI Component</div>
 </div>
 </div>
 <div class="sect2">
@@ -1709,7 +1755,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 12. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 14. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -2155,9 +2201,16 @@ b. Require developers to download those libraries manually (this creates extra w
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">student who interacts with a lot of people</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">export my contacts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">share/print them</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">student who does not like to do unnecessary work</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">import the contact details my group members saved before</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avoid unnecessary typing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">student who likes to save the trouble of my group mates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">export the contact details of my other group members
+that I have saved</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">share it to my group members for them to import to their JitHub</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
@@ -2211,7 +2264,7 @@ details manually</p></td>
 <h2 id="use-cases"><a class="link" href="#use-cases">Appendix C: Use Cases</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
+<p>(For all use cases below, the <strong>System</strong> is the <code>JitHub</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
 <h3 id="use-case-add-and-match-schedule" class="discrete">Use case: Add and Match schedule</h3>
 <div class="paragraph">
@@ -2317,9 +2370,6 @@ details manually</p></td>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 <h3 id="use-case-export-contacts" class="discrete">Use case: Export contacts</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
@@ -2327,25 +2377,20 @@ details manually</p></td>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to export contacts.</p>
+<p>User finds the contacts he wants to export.</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons and prompts user to select contacts to export.</p>
+<p>JitHub shows a list of contacts matching the search criteria.</p>
 </li>
 <li>
-<p>User chooses contacts with specific tags in the list to export.</p>
+<p>User requests to export the contacts shown to a file with specific filename.</p>
 </li>
 <li>
-<p>AddressBook prompts user for the filename and format (csv/vcf) of the output file.</p>
+<p>JitHub exports the list of contacts to the specific file.</p>
 </li>
 <li>
-<p>User chooses a filename and format.</p>
-</li>
-<li>
-<p>AddressBook generates the output file.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
+<p>User sends the file to his/her group members.
+Use case ends.</p>
 </li>
 </ol>
 </div>
@@ -2356,31 +2401,28 @@ details manually</p></td>
 <ul>
 <li>
 <p>2a. The list is empty.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-<li>
-<p>3a. The given index is invalid.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>2a1. User requests to export the empty contacts to a file with specific filename.</p>
+</li>
+<li>
+<p>2a2. JitHub indicates there is nothing to export.</p>
 <div class="paragraph">
-<p>Use case resumes at step 2.</p>
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>5a. The given format is invalid.</p>
+<p>3a. The given filename is invalid.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. JitHub shows an error message.</p>
 <div class="paragraph">
-<p>Use case resumes at step 4.</p>
+<p>Use case resumes at step 3.</p>
 </div>
 </li>
 </ul>
@@ -2633,24 +2675,72 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">F.5. Saving data</a></h3>
+<h3 id="exporting-and-importing-data"><a class="link" href="#exporting-and-importing-data">F.5. Exporting and importing data</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Dealing with missing/corrupted data files</p>
+<p>Exporting an empty list</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
+<p>Prerequisites: Clear all persons using the <code>clear</code> command.</p>
+</li>
+<li>
+<p>Test case: <code>export somefile</code><br>
+Expected: Error message "Invalid command format!"</p>
+</li>
+<li>
+<p>Test case: <code>export somefile.xml</code><br>
+Expected: Error message "There is nothing to export!"</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Importing a non-existent file</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The file <code>somefile.xml</code> does not exist at <code>&lt;DIRECTORY OF YOUR JAR&gt;/data/</code></p>
+</li>
+<li>
+<p>Test case: <code>import somefile</code><br>
+Expected: Error message "Invalid command format!"</p>
+</li>
+<li>
+<p>Test case: <code>import somefile.xml</code><br>
+Expected: Error message "File not found!"</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Exporting and importing the whole JitHub</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>list</code> command.</p>
+</li>
+<li>
+<p>Test case: <code>export somefile.xml</code> + <code>clear</code> + <code>import somefile.xml</code><br>
+Expected:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The persons listed are cleared after the <code>clear</code> command.</p>
+</li>
+<li>
+<p>The persons cleared are restored after the <code>import</code> command.
+<em>{ more test cases &#8230;&#8203; }</em></p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:51:17 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:56:25 UTC</div></div></div></body></html>

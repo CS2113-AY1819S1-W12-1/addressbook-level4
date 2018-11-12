@@ -33,16 +33,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Suggest available timeslot for  group project meetings</p>
+<p>Suggest available timeslot for group project meetings</p>
 </li>
 <li>
-<p>Import/Export data between group members</p>
+<p>Import/Export contacts details between group members</p>
 </li>
 <li>
-<p>Keep track of meeting minutes</p>
+<p>Keep track of your todos</p>
 </li>
 <li>
-<p>Keep track of tasks assigned to group members</p>
+<p>Suggest/Autocomplete your commands</p>
 </li>
 </ul>
 </div>
@@ -55,11 +55,11 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: added the ability to <strong>import/export data of different project groups</strong></p>
+<p><strong>Major enhancement</strong>: added the ability to <strong>import/export contacts details of different project groups</strong></p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows students to share data specific to different projects among his/her group members.</p>
+<p>What it does: allows students to share contact details specific to different projects among his/her group members.</p>
 </li>
 <li>
 <p>Justification: This feature improves the product significantly because only one member from the group is required to key in all the details, in contrast to requiring everyone in the team to type in the exact same details, which is tedious and inefficient.</p>
@@ -68,7 +68,7 @@
 <p>Highlights: This enhancement required an in-depth analysis of design alternatives regarding reading and writing data. The implementation too was challenging as it required thorough understanding of all the components related to data storage in the application.</p>
 </li>
 <li>
-<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+<p>Credits: <a href="http://opencsv.sourceforge.net/">OpenCSV</a></p>
 </li>
 </ul>
 </div>
@@ -78,7 +78,8 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&amp;search=jitwei98">Functional code</a>]</p>
+<p><strong>Code contributed</strong>: [<a href="https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&amp;search=jitwei98">Functional code</a>] -
+about 2K LoC(Lines of Code) including tests.</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -89,7 +90,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Managed milestones <code>v1.1</code> - <code>v1.4</code> (3 milestones) on GitHub</p>
+<p>Managed milestones <code>v1.1</code> - <code>v1.4</code> (4 milestones) on GitHub</p>
 </li>
 </ul>
 </div>
@@ -99,10 +100,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Updated the GUI color scheme (Pull requests <a href="https://github.com">#33</a>, <a href="https://github.com">#34</a>)</p>
+<p>Updated the GUI to reflect persons and todos (Pull requests <a href="https://github.com">#117</a>)</p>
 </li>
 <li>
-<p>Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests <a href="https://github.com">#36</a>, <a href="https://github.com">#38</a>)</p>
+<p>Wrote additional tests for existing features to increase coverage from 77% to 80% (Pull requests <a href="https://github.com">#200</a>)</p>
 </li>
 </ul>
 </div>
@@ -164,6 +165,181 @@
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="export"><a class="link" href="#export">Export contacts displayed: <code>export</code></a></h3>
+<div class="paragraph">
+<p>You can save the hassle of your group mates typing in the exact same contact details of your group members if you
+ have already save them into your JitHub.</p>
+</div>
+<div class="paragraph">
+<p>To do so, simply <strong>find</strong> the person(s) and <strong>export</strong> the contact details in JitHub to a
+file and share it with your group mates.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>export FILENAME.xml</code></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find Alex</code><br></p>
+</li>
+<li>
+<p><code>export alex.xml</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The file will be located in <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/FILENAME.xml</code></p>
+</li>
+<li>
+<p>This command overwrites any files with the same name at <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/</code></p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Your team members can import the contact details to their JitHub. Please refer to <a href="#import">Import contacts: <code>import</code></a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="import"><a class="link" href="#import">Import contacts: <code>import</code></a></h3>
+<div class="paragraph">
+<p>You can save the hassle of typing in the exact same contact details of your group members if one of your group members
+ have already save them into his/her JitHub.</p>
+</div>
+<div class="paragraph">
+<p>To do so, politely ask them to <strong>export</strong> the contact details and place the file your teammate exported into the
+<code>/data/</code> of your JitHub
+and <strong>import</strong> it into your JitHub.<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Format: <code>import FILENAME.xml</code></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>import alex.xml</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The file to import must be placed in <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/</code></p>
+</li>
+<li>
+<p>Persons that already exist in your JitHub won&#8217;t be imported.
+To import an existing person in JitHub with different contact details, please <code>delete</code> them first.</p>
+</li>
+<li>
+<p>The <code>undo</code> command works with the <code>import</code> command.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can refer to <a href="#export">Export contacts displayed: <code>export</code></a> for instructions on how to export contact details.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exportall"><a class="link" href="#exportall">Exporting all contacts : <code>exportall</code></a></h3>
+<div class="paragraph">
+<p>Export the name, phone, address and email of all persons in the addressbook under the specified filetype.<br>
+Format: <code>exportall FILETYPE</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>exportall csv</code></p>
+</li>
+<li>
+<p><code>exportall vcf</code> [coming in v2.0]</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The file will be located in <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/jithub.csv</code>.</p>
+</li>
+<li>
+<p>This command overwrites the previous <code>&lt;DIRECTORY OF YOUR JAR FILE&gt;/data/jithub.csv</code>.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -181,6 +357,367 @@ project.</strong></em></p></td>
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="Design-Export"><a class="link" href="#Design-Export">Export component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ExportClassDiagram.png" alt="ExportClassDiagram" width="800">
+</div>
+<div class="title">Figure 1. Structure of the Export Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/export/Export.java"><code>Export.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Export</code> component can save the filtered persons to the specified file in xml format.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Design-Import"><a class="link" href="#Design-Import">Import component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ImportClassDiagram.png" alt="ImportClassDiagram" width="800">
+</div>
+<div class="title">Figure 2. Structure of the Import Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/export/Import.java"><code>Import.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Import</code> component can read the Address Book data from the specified file in xml format.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The import component (Import.java and ImportManager.java) is packaged under the export package.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exportall"><a class="link" href="#exportall">ExportAll feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The exportall mechanism is facilitated by <code>CsvWriter</code>. Internally, a CSVWriter object from the <a href="http://opencsv.sourceforge.net/">OpenCSV</a>
+library is instantiated to write all persons to the default file path <code>/data/jithub.csv</code>. Currently, it implements
+ the following operation(s):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CsvWriter#write()</code>&#8201;&#8212;&#8201;Writes the name, phone, address, and email of all persons in the current address book to
+<code>/data/jithub.csv</code>, and overwrites the file if an older version is available.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This operation is exposed in the <code>Model</code> interface as <code>Model#exportAddressBook()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the exportall mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user calls the exportall command with <code>exportall csv</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The LogicManager calls parseCommand with the user input.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The AddressBookParser is called and it returns a ExportAllCommand object to LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The LogicManager calls execute() on the ExportAllCommand object</p>
+</div>
+<div class="paragraph">
+<p>Step 5. The Logic component then interacts with the Model component by calling <code>exportAddressBook()</code> of the Model
+interface.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. The Model interface creates a new CsvWriter object and invokes the method <code>write()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 7. The CsvWriter writes the data to the defined file path.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The file path is defined in <code>outputFilepath</code>, and is hardcoded as <code>/data/jithub.csv</code> for now.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Any existing file named as <code>jithub.csv</code> at the defined path will be overwritten.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the ExportAll operation works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ExportAllSequenceDiagram.png" alt="ExportAllSequenceDiagram" width="800">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-of-csvwriter-write"><a class="link" href="#implementation-of-csvwriter-write">Implementation of CsvWriter#write()</a></h4>
+<div class="paragraph">
+<p>Given below is the algorithm behind the write() method used in the <code>ExportAll</code> Command:</p>
+</div>
+<div class="paragraph">
+<p>Step 1. Instantiate an OpenCSV writer.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. Write the header to the csv file.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. Declare a <code>List&lt;String[]&gt; data</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. Loop through an
+<a href="https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html"><code>ObservableList&lt;Person&gt;</code></a>
+containing all persons in the AddressBook and push <code>String[] personDetails</code> to <code>data</code>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// Generates a string array for each person and stores the details
+String[] personDetails = new String[header.length];
+personDetails[INDEX_PERSON_NAME] = person.getName().toString();
+personDetails[INDEX_PERSON_PHONE] = person.getPhone().toString();
+personDetails[INDEX_PERSON_ADDRESS] = person.getAddress().toString();
+personDetails[INDEX_PERSON_EMAIL] = person.getEmail().toString();</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Step 5. Write <code>data</code> to the csv file.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. Close the OpenCSV writer.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-data-in-the-addressbook-is-passed-into-the-csvwriter-object"><a class="link" href="#aspect-how-data-in-the-addressbook-is-passed-into-the-csvwriter-object">Aspect: How data in the AddressBook is passed into the CsvWriter object</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> <code>ObservableList&lt;Person&gt;</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement since <code>getFilteredPersonList()</code> is already implemented.</p>
+</li>
+<li>
+<p>Cons: We must ensure that the implementation of each individual command are correct.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> <code>versionedAddressBook</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Looks more direct since the whole AddressBook is passed into the <code>CsvWriter</code>.</p>
+</li>
+<li>
+<p>Cons: Hard to write tests and requires more methods to process the data.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Solution</strong>: The data is passed into the <code>CsvWriter</code> object through its constructor as an <code>ObservableList&lt;Person&gt;</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="user-stories"><a class="link" href="#user-stories">Appendix A: User Stories</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all" style="width: 59%;">
+<colgroup>
+<col style="width: 22%;">
+<col style="width: 23%;">
+<col style="width: 25%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Priority</th>
+<th class="tableblock halign-left valign-top">As a/an &#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">I want to &#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">So that I can&#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">student who does not like to do unnecessary work</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">import the contact details my group members saved before</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avoid unnecessary typing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">student who likes to save the trouble of my group mates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">export the contact details of my other group members
+that I have saved</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">share it to my group members for them to import to their JitHub</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-case-export-contacts" class="discrete">Use case: Export contacts</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User finds the contacts he wants to export.</p>
+</li>
+<li>
+<p>JitHub shows a list of contacts matching the search criteria.</p>
+</li>
+<li>
+<p>User requests to export the contacts shown to a file with specific filename.</p>
+</li>
+<li>
+<p>JitHub exports the list of contacts to the specific file.</p>
+</li>
+<li>
+<p>User sends the file to his/her group members.
+Use case ends.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2a. The list is empty.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2a1. User requests to export the empty contacts to a file with specific filename.</p>
+</li>
+<li>
+<p>2a2. JitHub indicates there is nothing to export.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The given filename is invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. JitHub shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="exporting-and-importing-data"><a class="link" href="#exporting-and-importing-data">Exporting and importing data</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Exporting an empty list</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: Clear all persons using the <code>clear</code> command.</p>
+</li>
+<li>
+<p>Test case: <code>export somefile</code><br>
+Expected: Error message "Invalid command format!"</p>
+</li>
+<li>
+<p>Test case: <code>export somefile.xml</code><br>
+Expected: Error message "There is nothing to export!"</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Importing a non-existent file</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The file <code>somefile.xml</code> does not exist at <code>&lt;DIRECTORY OF YOUR JAR&gt;/data/</code></p>
+</li>
+<li>
+<p>Test case: <code>import somefile</code><br>
+Expected: Error message "Invalid command format!"</p>
+</li>
+<li>
+<p>Test case: <code>import somefile.xml</code><br>
+Expected: Error message "File not found!"</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Exporting and importing the whole JitHub</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>list</code> command.</p>
+</li>
+<li>
+<p>Test case: <code>export somefile.xml</code> + <code>clear</code> + <code>import somefile.xml</code><br>
+Expected:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The persons listed are cleared after the <code>clear</code> command.</p>
+</li>
+<li>
+<p>The persons cleared are restored after the <code>import</code> command.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -191,4 +728,4 @@ project.</strong></em></p></td>
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:51:17 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:56:25 UTC</div></div></div></body></html>
