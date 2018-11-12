@@ -33,8 +33,10 @@
 <li><a href="#exportall-feature">3.2. ExportAll Feature</a></li>
 <li><a href="#todo-feature">3.3. Todo Feature</a></li>
 <li><a href="#suggestions-feature">3.4. Suggestions Feature</a></li>
-<li><a href="#logging">3.5. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
+<li><a href="#schedule-feature">3.5. Schedule Feature</a></li>
+<li><a href="#proposed-calendar-ui-v2-0">3.6. [Proposed] Calendar UI [V2.0]</a></li>
+<li><a href="#logging">3.7. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -1171,14 +1173,109 @@ available commands.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
+<h3 id="schedule-feature"><a class="link" href="#schedule-feature">3.5. Schedule Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">3.5.1. Current implementation</a></h4>
+<div class="paragraph">
+<p>The schedule mechanism is facilitated by <code>Person</code>. It adds a schedule data set into a <code>Person</code> that was previously created
+to keep track of events and allow for searching of common available time slots later on.</p>
+</div>
+<div class="paragraph">
+<p>Given below is an example of a usage scenario and how the schedule mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>/ This part is to be done later /</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.2. Design considerations</a></h4>
+<div class="paragraph">
+<p>Aspect: How schedule is stored
+* Alternative 1 ( Current choice ): Schedule is stored with the Person</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement, easy to display from UI</p>
+</li>
+<li>
+<p>Cons: /TO BE DONE/ Test case constraints</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 2: Schedule is stored on it&#8217;s own, with a reference tag from the Person to retrieve and display it.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pros: Separate from the person to improve SOC.</p>
+</li>
+<li>
+<p>Cons: Expensive and difficult to implement.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Aspect: How match schedule executes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 ( Current choice ): Matches schedule only for 1 day</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement, less expensive in memory usage</p>
+</li>
+<li>
+<p>Cons: Unable to check across different dates</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2: Matches schedule across entire span</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Allows for a more friendly usage of matching schedules</p>
+</li>
+<li>
+<p>Cons: Very expensive in memory usage</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-calendar-ui-v2-0"><a class="link" href="#proposed-calendar-ui-v2-0">3.6. [Proposed] Calendar UI [V2.0]</a></h3>
+<div class="paragraph">
+<p>When a person is selected, the person&#8217;s schedule should be displayed on the calendar panel.</p>
+</div>
+<div class="paragraph">
+<p>The string of common time slots printed on the resultCommandWindow should be displayed on the calendar panel, under the
+correct date.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/FutureCalendarUI.png" alt="FutureCalendarUI" width="800">
+</div>
+<div class="title">Figure 10. Calendar UI Component</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1209,7 +1306,7 @@ available commands.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1275,7 +1372,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 10. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 11. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -1727,6 +1824,12 @@ b. Require developers to download those libraries manually (this creates extra w
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">student who wishes to schedule project meetings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see common available time slots between selected persons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">schedule a project meeting</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">student with different group projects</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">group my contacts into different categories</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can send out messages to different project groups</p></td>
@@ -1783,10 +1886,7 @@ details manually</p></td>
 <p>User requests to add personal schedule.</p>
 </li>
 <li>
-<p>User adds in non-available time slots with event tag.</p>
-</li>
-<li>
-<p>Jithub shows user available time slots.</p>
+<p>User adds in non-available time slots for selected persons with event name.</p>
 </li>
 <li>
 <p>User selects a group of persons.</p>
@@ -1805,9 +1905,16 @@ details manually</p></td>
 <div class="ulist">
 <ul>
 <li>
-<p>2a. User requests to delete added schedule.</p>
+<p>2a. User requests to clear added schedule of a person.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2ai. Schedule of selected person is cleared.</p>
 <div class="paragraph">
 <p>Use case resumes at step 3.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 <li>
@@ -1817,7 +1924,7 @@ details manually</p></td>
 </div>
 </li>
 <li>
-<p>5a. No common time slots available.</p>
+<p>4a. No common time slots available.</p>
 <div class="paragraph">
 <p>Use Case ends.</p>
 </div>
@@ -2102,4 +2209,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:27:04 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:41:02 UTC</div></div></div></body></html>
