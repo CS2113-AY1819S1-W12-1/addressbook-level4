@@ -13,7 +13,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="project"><a class="link" href="#project">PROJECT:</a></h2>
+<h2 id="project-jithub-a-student-meeting-planner"><a class="link" href="#project-jithub-a-student-meeting-planner">PROJECT: 'JitHub' - A Student Meeting Planner:</a></h2>
 <div class="sectionbody">
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -35,13 +35,13 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><code>JitHub</code> is a desktop meeting organising application targeted at tertiary students. Besides enabling you to view common
+<p><code>JitHub</code> is a desktop meeting planning application targeted at tertiary students. Besides enabling you to view common
 meeting time slots in teams, it includes various meeting tools such as the taking of minutes and a list of todo tasks.
 This is done with a Command Line Interface(CLI), and it has a GUI created with JavaFX.
  <code>JitHub</code> is written in Java, and has about 10 kLoC.</p>
 </div>
 <div class="paragraph">
-<p>JitHub is developed in a team of five throughout the course of a semester as part of module requirements in the School
+<p>JitHub is developed in my team of five throughout the course of a semester as part of module requirements in the School
 of Computing, National University of Singapore.</p>
 </div>
 <div class="paragraph">
@@ -65,20 +65,24 @@ of Computing, National University of Singapore.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: Added <strong>the ability to view available meeting time slots in teams.</strong></p>
+<p><strong>Major enhancement</strong>: Added <strong>the ability to view common time slots of selected persons.</strong></p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: It allows you to view the available meeting time slots based on the calendar of all team members</p>
+<p>What it does: It allows you to view the available meeting time slots based on the scheduled events of all team members</p>
 </li>
 <li>
-<p>Justification: This feature improves the product significantly as it enables you to arrange for group meetings without
+<p>Justification: For tertiary students like us, we identified that it is difficult to plan for group project
+ meetings. Therefore, based on the needs of a tertiary student, it is great to simplify the tedious manual task of finding common
+ time slots with a feature. This feature is thus a core of the product as it enables you to arrange for group meetings without
 manually checking each team member&#8217;s calendar.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects GUI to be added in future, should the calendar be displayed with a non-text format.
-It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes
-to existing commands.</p>
+<p>Highlights: To ensure that the schedule feature to view common time slots is easy to use, it required an in depth analysis of
+ design alternatives. Furthermore, it implements a stringent check on date and time fields to prevent mishandling of entered information.
+ To have a balance between capability and cost, a 1 day selection period is also implemented to prevent the program from taking too long to respond.
+ This enhancement affects GUI to be added in future, should the common time slots be displayed in a non-text format
+such as by using a calendar display visual.</p>
 </li>
 <li>
 <p>Credits: Mr Akshay Narayan, Team Members, Seniors</p>
@@ -87,10 +91,17 @@ to existing commands.</p>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: added a browser panel which allows people to search for photographs of an added person.</p>
+<p><strong>Minor enhancement</strong>: Added a Welcome Message on the calendar panel which allows people to search for photographs of an added person.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Justification: Users needed a prompt when we conducted user tests on week 11 of the semester.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com/driedmelon/main/commits?author=driedmelon">Functional code</a>]</p>
+<p><strong>Code contributed</strong>: [<a href="https://github.com/driedmelon/main/commits?author=driedmelon">Code Dashboard</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -101,16 +112,17 @@ to existing commands.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
-</li>
-</ul>
-</div>
+<p>Ensured that project meetings were carried out every Monday morning for the setting of direction and the purpose of updating each other.</p>
 </li>
 <li>
 <p>Enhancements to existing features:</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
-<p>Documentation:</p>
+<p>Increased code coverage from 80% to 83% (Pull requests <a href="https://github.com/CS2113-AY1819S1-W12-1/main/pull/201">#201</a>)</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Community:</p>
@@ -120,7 +132,15 @@ to existing commands.</p>
 <p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#45</a>, <a href="https://github.com">#50</a>, <a href="https://github.com">#62</a></p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (TO BE DONE ON 2/11/2018 FRIDAY)</p>
+<p>Reported bugs and suggestions for other teams in the class (Issue <a href="https://github.com/CS2113-AY1819S1-T13-2/main/issues/127">#127</a>
+<a href="https://github.com/CS2113-AY1819S1-T13-2/main/issues/130">#130</a>
+<a href="https://github.com/CS2113-AY1819S1-T13-2/main/issues/144">#144</a>
+<a href="https://github.com/CS2113-AY1819S1-T13-2/main/issues/140">#140</a>
+<a href="https://github.com/CS2113-AY1819S1-T13-2/main/issues/139">#139</a>
+<a href="https://github.com/CS2113-AY1819S1-T13-2/main/issues/126">#126</a></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -214,13 +234,14 @@ Format: <code>matchSchedule d/SELECTED-DATE st/START-TIME et/END-TIME i/INDEX-OF
 </div>
 </div>
 <div class="sect2">
-<h3 id="encryption-coming-in-v2-0"><a class="link" href="#encryption-coming-in-v2-0">Encryption [Coming in V2.0]</a></h3>
+<h3 id="calendar-to-view-schedule-coming-in-v2-0"><a class="link" href="#calendar-to-view-schedule-coming-in-v2-0">Calendar to view schedule [Coming in V2.0]</a></h3>
 <div class="paragraph">
-<p>When exporting contacts for the purpose of information transfer to another computer, encryption can be enabled before
-the export command to prevent data misuse.</p>
+<p>When selecting a person, the scheduled events are to be displayed on the calendar panel.
+Command type: <code>select INDEX</code></p>
 </div>
 <div class="paragraph">
-<p>Command type: <code>encrypt for export</code></p>
+<p>When matching schedules, the common time slots found are to be displayed on the calendar panel.
+Command type: <code>matchSchedule d/SELECTED-DATE st/START-TIME et/END-TIME i/INDEX-OF-PERSON&#8230;&#8203;[INDEX]</code></p>
 </div>
 </div>
 </div>
@@ -238,8 +259,171 @@ the export command to prevent data misuse.</p>
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="schedule-feature"><a class="link" href="#schedule-feature">Schedule Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current implementation</a></h4>
 <div class="paragraph">
-<p>Developer guide not updated online. [Coming soon in v1.4]</p>
+<p>The schedule mechanism is facilitated by <code>Person</code>. It adds a schedule data set into a <code>Person</code> that was previously created
+to keep track of events and allow for searching of common available time slots later on.</p>
+</div>
+<div class="paragraph">
+<p>Given below is an example of a usage scenario and how the schedule mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user calls the schedule command with <code>schedule index date startTime endTime eventName</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The LogicManager calls parseCommand with the user input.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The AddressBookParser is called and it returns a ScheduleCommand object to LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The LogicManager calls execute() on the ScheduleCommand object.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. The ScheduleCommand object creates a person object for model.</p>
+</div>
+<div class="paragraph">
+<p>Step 6. The Logic component then interacts with the Model component by calling UpdatePerson("target, editedPersonWithSchedule")</p>
+</div>
+<div class="paragraph">
+<p>Step 7. The Model component updates the address book.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ScheduleSequenceDiagram.png" alt="ScheduleSequenceDiagram" width="1000">
+</div>
+<div class="title">Figure 1. Schedule sequence diagram</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="match-schedule"><a class="link" href="#match-schedule">Match schedule</a></h4>
+<div class="paragraph">
+<p>Given below is the algorithm behind the matchSchedule command.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user calls the matchSchedule command with <code>matchSchedule date startTime endTime index&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. The LogicManager calls parseCommand with the user input.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The AddressBookParser is called and it returns a MatchScheduleCommand object to LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The LogicManager calls execute on the MatchScheduleCommand object.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. The MatchScheduleCommand object finds common time slots in the date and time range given by startTime and endTime
+by generating an array, and updates the UI part of address book.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// Generates an int array (startEndTimeBlock) of size 1440 which stores whether each minute of the day is busy
+for (int i = 0; i &lt; this.startTimeList.size(); i++) {
+            for (int j = this.startTimeList.get(i).timeToMinutesInDay();
+                 j &lt;= this.endTimeList.get(i).timeToMinutesInDay(); j++) {
+                this.startEndTimeBlock[j] = 1;
+       }
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design considerations</a></h4>
+<div class="paragraph">
+<p>Aspect: How schedule is stored
+* Alternative 1 ( Current choice ): Schedule is stored with the Person</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement, easy to display from UI</p>
+</li>
+<li>
+<p>Cons: /TO BE DONE/ Test case constraints</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 2: Schedule is stored on it&#8217;s own, with a reference tag from the Person to retrieve and display it.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pros: Separate from the person to improve SOC.</p>
+</li>
+<li>
+<p>Cons: Expensive and difficult to implement.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Aspect: How match schedule executes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 ( Current choice ): Matches schedule only for 1 day</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement, less expensive in memory usage</p>
+</li>
+<li>
+<p>Cons: Unable to check across different dates</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2: Matches schedule across entire span</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Allows for a more friendly usage of matching schedules</p>
+</li>
+<li>
+<p>Cons: Very expensive in memory usage</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="schedule-display-calendar-selected-person"><a class="link" href="#schedule-display-calendar-selected-person">Schedule Display Calendar Selected Person</a></h3>
+<div class="paragraph">
+<p>This feature allows the calendar of a person to be displayed upon being selected.
+==== Current Implementation
+This makes use of the calendar feature, which activates the rendering of the calendar upon an event of a person being selected.</p>
+</div>
+<div class="paragraph">
+<p>Upon the selection of a person, the calendar will overwrite the welcome message view, showing the calendar of the current month.</p>
+</div>
+<div class="paragraph">
+<p><strong>It is unable to show the schedules added into the person.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-schedule-display-calendar-selected-person-v2-0"><a class="link" href="#proposed-schedule-display-calendar-selected-person-v2-0">[Proposed] Schedule Display Calendar Selected Person [V2.0]</a></h3>
+<div class="paragraph">
+<p>When a person is selected, the person&#8217;s schedule should be displayed on the calendar panel.</p>
+</div>
+<div class="paragraph">
+<p>The string of common time slots printed on the resultCommandWindow should be displayed on the calendar panel, under the
+correct date.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/FutureCalendarUI.png" alt="FutureCalendarUI" width="380">
+</div>
+<div class="title">Figure 2. Calendar UI Component</div>
+</div>
 </div>
 </div>
 </div>
@@ -253,4 +437,4 @@ module project of UTC2101.
 <a href="https://github.com/driedmelon/UTC2101-Time-and-Life-Chatbot">Time and Life Chatbot</a></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:36:02 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:45:53 UTC</div></div></div></body></html>
